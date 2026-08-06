@@ -7,8 +7,8 @@
 <meta name="description" content="Lala Land Kids is a licensed bilingual English–Russian family daycare and preschool in Foster City, CA. Infants through preschool. Small groups, home-cooked meals, daily photo updates. Book a free tour.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=3">
 <link rel="icon" href="assets/logo.jpg">
 </head>
 <body data-lang="en">
@@ -38,13 +38,6 @@
   <symbol id="i-bottle" viewBox="0 0 24 24"><path d="M9.8 3h4.4v3H9.8Z"/><path d="M10.3 6c-1.3.6-2 1.5-2 2.6M13.7 6c1.3.6 2 1.5 2 2.6"/><path d="M8.3 8.6h7.4V19a2.3 2.3 0 0 1-2.3 2.3h-2.8A2.3 2.3 0 0 1 8.3 19Z"/><path d="M8.3 12.4h7.4M8.3 15.6h7.4"/></symbol>
   <symbol id="i-play" viewBox="0 0 24 24"><path d="M8.2 5.2v13.6L20 12Z" fill="currentColor" stroke="none"/></symbol>
 </svg>
-
-<!-- DRAFT ONLY — remove this banner before any launch -->
-<div class="draft-note" id="draftNote">
-  <span class="en">Local draft — not live. Placeholders to replace: photos, videos, testimonials.</span>
-  <span class="ru" lang="ru">Локальный черновик — сайт не опубликован. Заменить: фото, видео, отзывы.</span>
-  <button onclick="document.getElementById('draftNote').remove()">✕</button>
-</div>
 
 <header class="site-header">
   <div class="container nav-bar">
@@ -91,6 +84,15 @@
         <a class="btn btn-primary btn-lg" href="#visit"><span class="en">Book a Free Tour</span><span class="ru" lang="ru">Записаться на бесплатный визит</span></a>
         <a class="btn btn-secondary btn-lg" href="#day"><span class="en">See Our Day</span><span class="ru" lang="ru">Наш день</span></a>
       </div>
+      <div class="hero-info">
+        <span class="item"><svg class="ic"><use href="#i-clock"/></svg><span class="en">Mon–Fri · drop-off 8:00–9:30 AM · pick-up until 6:00 PM</span><span class="ru" lang="ru">Пн–Пт · приём 8:00–9:30 · до 18:00</span></span>
+        <span class="item"><svg class="ic"><use href="#i-pin"/></svg><a href="https://maps.google.com/?q=842+Chrysopolis+Dr,+Foster+City,+CA+94404" target="_blank" rel="noopener">842 Chrysopolis Dr, Foster City</a></span>
+        <span class="item"><svg class="ic"><use href="#i-phone"/></svg><a href="tel:+14153505015">(415) 350-5015</a></span>
+      </div>
+      <p class="tour-note">
+        <span class="en">Openings and tuition are discussed at your tour — call or text to schedule.</span>
+        <span class="ru" lang="ru">Свободные места и стоимость обсуждаем на визите — позвоните или напишите SMS.</span>
+      </p>
       <p class="hero-gift">
         <span class="en">Every little visitor takes home their own plush dragon — a tour shouldn’t feel scary, it should feel like a gift.</span>
         <span class="ru" lang="ru">Каждый маленький гость уносит домой своего плюшевого дракончика — визит должен не пугать, а радовать, как подарок.</span>
@@ -128,8 +130,9 @@
       </div>
       <!-- PLACEHOLDER: replace this div with a real photo of Gulsum & Lala:
            <img class="about-photo" src="assets/gulsum-and-lala.jpg" alt="Gulsum and Lala"> -->
+      <!-- Swap for a real photo of Gulsum & Lala when one is chosen: assets/gulsum-and-lala.jpg -->
       <div class="about-photo reveal">
-        <span><span class="en">Photo of Gulsum &amp; Lala goes here<br><small>(real faces build more trust than any stock photo)</small></span><span class="ru" lang="ru">Здесь будет фото Гюльсум и Лалы</span></span>
+        <img src="assets/logo.jpg" alt="Lala Land Kids" style="width:min(300px,70%);border-radius:26px;box-shadow:var(--shadow)">
       </div>
     </div>
   </section>
@@ -336,8 +339,8 @@
         <a class="btn btn-secondary" href="tel:+14153505015"><span class="en">Call (415) 350-5015</span><span class="ru" lang="ru">Позвонить (415) 350-5015</span></a>
       </div>
       <p class="tuition-fineprint">
-        <span class="en">Every family’s schedule is different, so we talk through tuition in person at your free tour — no surprises, no pressure. Holiday closures are communicated in advance. Meals are included in all programs.</span>
-        <span class="ru" lang="ru">График каждой семьи индивидуален, поэтому стоимость мы обсуждаем лично на бесплатном визите — без сюрпризов и давления. О праздничных выходных мы сообщаем заранее. Питание включено во все программы.</span>
+        <span class="en">Every family’s schedule is different, so we talk through tuition in person at your free tour — no surprises, no pressure. Spots are limited: if your age group is full, we keep a short waitlist and will tell you honestly what’s available and when. Holiday closures are communicated in advance. Meals are included in all programs.</span>
+        <span class="ru" lang="ru">График каждой семьи индивидуален, поэтому стоимость мы обсуждаем лично на бесплатном визите — без сюрпризов и давления. Мест немного: если ваша возрастная группа заполнена, мы ведём небольшой лист ожидания и честно скажем, что и когда освободится. О праздничных выходных мы сообщаем заранее. Питание включено во все программы.</span>
       </p>
     </div>
   </section>
@@ -405,16 +408,36 @@
             <h3 style="margin-bottom:8px"><span class="en">Ready to visit?</span><span class="ru" lang="ru">Готовы к визиту?</span></h3>
             <p style="font-size:0.95rem;color:var(--ink-soft);margin-bottom:14px"><span class="en">Call or text us and we’ll set up your free tour — we speak English and Russian.</span><span class="ru" lang="ru">Позвоните или напишите SMS — договоримся о бесплатном визите. Говорим по-русски и по-английски.</span></p>
             <div style="display:flex;gap:12px;flex-wrap:wrap">
-              <a class="btn btn-primary" href="tel:+14153505015"><span class="en">Call or Text (415) 350-5015</span><span class="ru" lang="ru">Позвонить: (415) 350-5015</span></a>
-              <a class="btn btn-secondary" href="https://www.instagram.com/lalalandkids_fostercity" target="_blank" rel="noopener"><span class="en">Message on Instagram</span><span class="ru" lang="ru">Написать в Instagram</span></a>
+              <a class="btn btn-primary" href="tel:+14153505015"><span class="en">Call (415) 350-5015</span><span class="ru" lang="ru">Позвонить: (415) 350-5015</span></a>
+              <a class="btn btn-primary" href="sms:+14153505015?body=Hi!%20I%27d%20like%20to%20book%20a%20free%20tour%20of%20Lala%20Land%20Kids%20for%20my%20child%20(age%20___)."><span class="en">Text Us</span><span class="ru" lang="ru">Написать SMS</span></a>
+              <a class="btn btn-secondary" href="https://www.instagram.com/lalalandkids_fostercity" target="_blank" rel="noopener"><span class="en">Instagram</span><span class="ru" lang="ru">Instagram</span></a>
             </div>
-            <p style="font-size:0.8rem;color:var(--ink-soft);margin:10px 0 0"><span class="en">We reply quickly — usually the same business day.</span><span class="ru" lang="ru">Мы отвечаем быстро — обычно в тот же рабочий день.</span></p>
+            <p style="font-size:0.8rem;color:var(--ink-soft);margin:10px 0 0"><span class="en">Openings and tuition are discussed at your tour. We reply quickly — usually the same business day.</span><span class="ru" lang="ru">Свободные места и стоимость обсуждаем на визите. Мы отвечаем быстро — обычно в тот же рабочий день.</span></p>
           </div>
         </div>
         <div class="reveal">
-          <iframe class="map-frame" loading="lazy" title="Map — Lala Land Kids, Foster City"
+          <!-- Provider reassurance card (BH director-card pattern). Swap the logo for a real
+               photo of Gulsum & Lala when one is chosen: assets/gulsum-and-lala.jpg -->
+          <div class="card" style="margin-bottom:18px;padding:22px 24px;display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+            <img src="assets/logo.jpg" alt="Lala Land Kids" style="width:86px;border-radius:16px;flex:none">
+            <div style="flex:1;min-width:220px">
+              <h3 style="margin-bottom:4px"><span class="en">You’ll be touring with us</span><span class="ru" lang="ru">Визит проведём мы сами</span></h3>
+              <p style="font-size:0.88rem;color:var(--ink-soft);margin-bottom:8px"><span class="en">Gulsum Ahmadova — Licensed Provider, CDSS #414005148 · with Lala, activities lead</span><span class="ru" lang="ru">Гюльсум Ахмадова — лицензия CDSS №414005148 · с Лалой, ведущей занятий</span></p>
+              <ul style="list-style:none;font-size:0.88rem;color:var(--ink-soft)">
+                <li style="padding:2px 0"><span class="en">— Meet Gulsum and Lala in person</span><span class="ru" lang="ru">— Познакомьтесь с Гюльсум и Лалой лично</span></li>
+                <li style="padding:2px 0"><span class="en">— See every room and the outdoor space</span><span class="ru" lang="ru">— Посмотрите все комнаты и площадку</span></li>
+                <li style="padding:2px 0"><span class="en">— Discuss your schedule, openings, and tuition</span><span class="ru" lang="ru">— Обсудите график, места и стоимость</span></li>
+              </ul>
+            </div>
+          </div>
+          <iframe class="map-frame" loading="lazy" title="Map — Lala Land Kids, Foster City" style="height:290px"
             src="https://www.google.com/maps?q=842+Chrysopolis+Dr,+Foster+City,+CA+94404&output=embed"></iframe>
         </div>
+      </div>
+      <div class="steps-row">
+        <div class="step reveal"><div class="n">1</div><h3><span class="en">Call or text us</span><span class="ru" lang="ru">Позвоните или напишите</span></h3><p><span class="en">We’ll find a time that works — usually within a day or two.</span><span class="ru" lang="ru">Подберём удобное время — обычно в течение пары дней.</span></p></div>
+        <div class="step reveal"><div class="n">2</div><h3><span class="en">Visit for a 30-minute tour</span><span class="ru" lang="ru">Приходите на 30-минутный визит</span></h3><p><span class="en">See a normal day, meet us, and ask anything — tuition included.</span><span class="ru" lang="ru">Посмотрите обычный день, познакомьтесь с нами, задайте любые вопросы.</span></p></div>
+        <div class="step reveal"><div class="n">3</div><h3><span class="en">We hold your spot</span><span class="ru" lang="ru">Мы бронируем место</span></h3><p><span class="en">Simple paperwork, and your little one’s place is saved.</span><span class="ru" lang="ru">Простые документы — и место за вашим малышом.</span></p></div>
       </div>
     </div>
   </section>
@@ -423,9 +446,12 @@
   <section class="cta-band">
     <div class="container">
       <h2><span class="en">Choosing childcare is a big decision.</span><span class="ru" lang="ru">Выбор детского сада — большое решение.</span></h2>
-      <p><span class="en">Don’t decide from a website — come see a normal day with your own eyes. Meet us, ask us anything, and feel the difference the second you walk in.</span>
-      <span class="ru" lang="ru">Не решайте по сайту — приходите и посмотрите обычный день своими глазами. Познакомьтесь с нами и почувствуйте разницу с первой минуты.</span></p>
-      <a class="btn btn-sun btn-lg" href="#visit"><span class="en">Book a Free Tour</span><span class="ru" lang="ru">Записаться на визит</span></a>
+      <p><span class="en">Don’t decide from a website — come see a normal day with your own eyes. Meet us, ask us anything, and feel the difference the second you walk in. Openings and tuition are discussed at your tour.</span>
+      <span class="ru" lang="ru">Не решайте по сайту — приходите и посмотрите обычный день своими глазами. Познакомьтесь с нами и почувствуйте разницу с первой минуты. Свободные места и стоимость обсуждаем на визите.</span></p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a class="btn btn-sun btn-lg" href="#visit"><span class="en">Book a Free Tour</span><span class="ru" lang="ru">Записаться на визит</span></a>
+        <a class="btn btn-lg" style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.7)" href="sms:+14153505015?body=Hi!%20I%27d%20like%20to%20book%20a%20free%20tour%20of%20Lala%20Land%20Kids%20for%20my%20child%20(age%20___)."><span class="en">Text (415) 350-5015</span><span class="ru" lang="ru">SMS: (415) 350-5015</span></a>
+      </div>
     </div>
   </section>
 
