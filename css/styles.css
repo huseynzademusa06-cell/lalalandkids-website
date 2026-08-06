@@ -63,7 +63,7 @@ h3 { font-size: 1.25rem; }
 p { margin-bottom: 1em; }
 a { color: var(--sky-deep); }
 
-.container { width: min(1120px, 92%); margin: 0 auto; }
+.container { width: min(1240px, 94.5%); margin: 0 auto; }
 
 /* --------------------------------------------------------------------------
    Language toggle (index page): body[data-lang] shows one language at a time
@@ -142,6 +142,15 @@ body[data-lang="ru"] .en { display: none !important; }
 .btn-sun { background: var(--sun); color: var(--sun-ink); }
 .btn-sun:hover { background: var(--sun-deep); color: var(--sun-ink); }
 .btn-lg { font-size: 1.15rem; padding: 15px 34px; }
+/* Round Instagram icon button */
+.btn-ig {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 50%; flex: none;
+  border: 2px solid var(--sky); color: var(--sky-deep); background: var(--white);
+  transition: transform 0.15s, background 0.2s;
+}
+.btn-ig:hover { transform: translateY(-2px); background: var(--sky-mist); }
+.btn-ig .ic { width: 24px; height: 24px; }
 
 /* --------------------------------------------------------------------------
    Hero
@@ -504,4 +513,13 @@ html.js-anim .reveal.in { opacity: 1; transform: none; }
   .section { padding: 56px 0; }
   .post { padding: 28px 22px; }
   .signup-panel { padding: 30px 22px; }
+
+  /* Mobile reads left-aligned, not centered (BH pattern) */
+  .hero, .section-head, .schedule-note, .tuition-fineprint, .cta-band { text-align: left; }
+  .hero-logo { margin: 0 0 24px; }
+  .hero-actions, .hero-info, .toc-chips, .cta-band div { justify-content: flex-start; }
+  .trust-list { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .price-card, .step { text-align: left; }
+  .step .n { margin: 0 0 12px; }
+  .cta-band p { margin-left: 0; }
 }
