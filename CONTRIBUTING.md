@@ -9,24 +9,40 @@ not negotiable without the owner saying so in writing.
 
 ## Workflow
 
-**`main` is the live site.** A merge to `main` is a publish — there is no staging environment.
+**You have direct push access to `main`, and `main` is the live site.** A push is a publish —
+it is on lalalandkids.care about a minute later, in front of parents deciding where to send
+their child. There is no staging environment and no review gate. That trust is deliberate;
+the discipline below is what it assumes.
+
+**Always, before pushing:** run it locally (`python3 -m http.server 8000`), look at the page you
+changed at desktop *and* mobile width, and check the console is clean.
+
+**Push straight to `main`** for small, self-evident, low-blast-radius changes — a typo, a broken
+link, a CSS nudge on one component.
+
+**Open a pull request** — even though nothing forces you to — when the change is any of:
+
+- new or reworded parent-facing copy, or anything touching facts, names, or claims
+- anything involving photos of children, testimonials, or the license line
+- a change to the shared design system in `css/styles.css` that affects more than one component
+- a new page, a form, an embed, or any third-party script
+- anything you are not fully sure about
 
 ```bash
-git switch -c fix/short-description   # branch for every change
-# ...work, test locally at http://localhost:8000...
+git switch -c fix/short-description
+# ...work, test locally...
 git commit -m "Describe what changed and why"
 git push -u origin fix/short-description
 gh pr create            # or open the PR on github.com
 ```
 
-Then: owner reviews → merge → live in ~1 minute.
+Other rules of the road:
 
-- One topic per PR. A CSS refactor and a copy change are two PRs.
+- One topic per commit or PR. A CSS refactor and a copy change are separate.
+- Write commit messages that say *why*, not just what. This repo's history is the only changelog.
 - Never force-push `main`, never rewrite published history.
-- If something on the live site is broken right now, say so in the PR title (`HOTFIX:`) and ping the
-  owner directly — don't wait on async review.
-
----
+- If you break the live site, fix forward or `git revert` immediately, then tell the owner. Don't
+  leave a broken page up while you investigate.
 
 ## Hard rules — content
 
