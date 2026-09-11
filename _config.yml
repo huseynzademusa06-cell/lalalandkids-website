@@ -1,0 +1,11 @@
+# GitHub Pages (Jekyll) build config.
+# The site is plain static HTML — Jekyll only copies it. This file exists for one
+# reason: keep internal/developer files out of the published site so they are not
+# served on lalalandkids.care. Do not remove without reading CONTRIBUTING.md.
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - FACTS.md
+  - tools/
+  - .gitignore
+  - .github/

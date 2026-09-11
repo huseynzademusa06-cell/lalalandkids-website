@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+._*
+
+# Editors / tooling
+.vscode/
+.idea/
+*.swp
+
+# Local-only working material — never publish
+drafts/
+improvement-plan.html
+*.numbers
+*.xlsx
+*.docx
+*.pdf
