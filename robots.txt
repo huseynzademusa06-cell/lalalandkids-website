@@ -1,4 +1,11 @@
+# Allow all search engine crawlers full access to public pages
 User-agent: *
 Allow: /
 
-Sitemap: https://lalalandkids.care/sitemap.xml
+# Prevent indexing of internal search, parameters, or private assets (if any)
+Disallow: /*?*
+Disallow: /admin/
+Disallow: /private/
+
+# Explicitly declare the canonical XML sitemap location
+Sitemap: https://lalalandchildcare.com/sitemap.xml
