@@ -4,8 +4,6 @@ Allow: /
 
 # Prevent indexing of internal search, parameters, or private assets (if any)
 Disallow: /*?*
-Disallow: /admin/
-Disallow: /private/
 
 # Explicitly declare the canonical XML sitemap location
 Sitemap: https://lalalandkids.care/sitemap.xml
