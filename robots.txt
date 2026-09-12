@@ -8,4 +8,4 @@ Disallow: /admin/
 Disallow: /private/
 
 # Explicitly declare the canonical XML sitemap location
-Sitemap: https://lalalandchildcare.com/sitemap.xml
+Sitemap: https://lalalandkids.care/sitemap.xml
