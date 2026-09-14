@@ -1,14 +1,17 @@
 import { StrictMode } from "react";
 import { Outlet } from "react-router-dom";
-// import Header from './Header'
+import Header from "./Header";
+import { LanguageProvider } from "../../context/languageContext";
 // import Footer from './Footer'
 
 export default function Layout() {
   return (
     <StrictMode>
-      {/* <Header /> */}
-      <Outlet />
-      {/* <Footer /> */}
+      <LanguageProvider>
+        <Header />
+        <Outlet />
+        {/* <Footer /> */}
+      </LanguageProvider>
     </StrictMode>
   );
 }
