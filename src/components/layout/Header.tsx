@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../context/languageContext";
+import logoImg from "/public/assets/logo.jpg";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,21 +10,32 @@ export default function Header() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className="site-header">
-      <div className="container nav-bar">
-        <Link className="brand" to="/" onClick={closeMenu}>
-          <img src="/assets/logo.jpg" alt="Lala Land logo — friendly dragon under a rainbow" />
-          <span className="brand-name">
+    <header className="sticky top-0 z-50 bg-cream/94 backdrop-blur-md border-b-3 border-transparent [border-image:var(--rainbow,linear-gradient(to_right,#45beea,#f7b32b))_1]">
+      <div className="w-[min(1240px,94.5%)] mx-auto flex items-center gap-5 py-2.5 relative">
+        <Link className="flex items-center gap-3 no-underline" to="/" onClick={closeMenu}>
+          <img
+            src={logoImg}
+            alt="Lala Land logo — friendly dragon under a rainbow"
+            className="w-15.5 h-auto rounded-brand-sm"
+          />
+          <span className="font-display font-extrabold text-[1.3rem] text-sky-deep leading-tight whitespace-nowrap">
             Lala Land
-            <small className="en">Child Care &amp; Preschool</small>
-            <small className="ru" lang="ru">
+            <small
+              className={`block text-[0.68rem] tracking-[0.14em] uppercase text-pink-deep ${lang === "ru" ? "hidden" : "block"}`}
+            >
+              Child Care &amp; Preschool
+            </small>
+            <small
+              className={`block text-[0.68rem] tracking-[0.14em] uppercase text-pink-deep ${lang === "ru" ? "block" : "hidden"}`}
+              lang="ru"
+            >
               Детский сад и подготовка к школе
             </small>
           </span>
         </Link>
 
         <button
-          className="nav-burger"
+          className="hidden max-[920px]:block ml-auto bg-transparent border-none text-[1.7rem] cursor-pointer text-ink"
           aria-label="Menu"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
@@ -31,66 +43,110 @@ export default function Header() {
           ☰
         </button>
 
-        <ul className={`nav-links${menuOpen ? " open" : ""}`}>
+        <ul
+          className={`
+          flex items-center gap-1 ml-auto list-none
+          max-[920px]:absolute max-[920px]:top-full max-[920px]:left-0 max-[920px]:right-0 
+          max-[920px]:bg-white max-[920px]:shadow-brand max-[920px]:flex-col max-[920px]:items-stretch 
+          max-[920px]:text-center max-[920px]:p-3.5 max-[920px]:ml-0
+          ${menuOpen ? "max-[920px]:flex" : "max-[920px]:hidden"}
+        `}
+        >
           <li>
-            <a href="#about" onClick={closeMenu}>
-              <span className="en">About</span>
-              <span className="ru" lang="ru">
+            <a
+              href="#about"
+              onClick={closeMenu}
+              className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+            >
+              <span className={lang === "ru" ? "hidden" : "inline"}>About</span>
+              <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                 О нас
               </span>
             </a>
           </li>
           <li>
-            <a href="#day" onClick={closeMenu}>
-              <span className="en">Our Day</span>
-              <span className="ru" lang="ru">
+            <a
+              href="#day"
+              onClick={closeMenu}
+              className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+            >
+              <span className={lang === "ru" ? "hidden" : "inline"}>Our Day</span>
+              <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                 Наш день
               </span>
             </a>
           </li>
           <li>
-            <a href="#programs" onClick={closeMenu}>
-              <span className="en">Programs</span>
-              <span className="ru" lang="ru">
+            <a
+              href="#programs"
+              onClick={closeMenu}
+              className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+            >
+              <span className={lang === "ru" ? "hidden" : "inline"}>Programs</span>
+              <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                 Программы
               </span>
             </a>
           </li>
           <li>
-            <Link to="/testimonials" onClick={closeMenu}>
-              <span className="en">Testimonials</span>
-              <span className="ru" lang="ru">
+            <Link
+              to="/testimonials"
+              onClick={closeMenu}
+              className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+            >
+              <span className={lang === "ru" ? "hidden" : "inline"}>Testimonials</span>
+              <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                 Отзывы
               </span>
             </Link>
           </li>
           <li>
-            <Link to="/gallery" onClick={closeMenu}>
-              <span className="en">Gallery</span>
-              <span className="ru" lang="ru">
+            <Link
+              to="/gallery"
+              onClick={closeMenu}
+              className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+            >
+              <span className={lang === "ru" ? "hidden" : "inline"}>Gallery</span>
+              <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                 Галерея
               </span>
             </Link>
           </li>
           <li>
-            <Link to="/newsletter" onClick={closeMenu}>
-              <span className="en">News &amp; Blog</span>
-              <span className="ru" lang="ru">
+            <Link
+              to="/newsletter"
+              onClick={closeMenu}
+              className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+            >
+              <span className={lang === "ru" ? "hidden" : "inline"}>News &amp; Blog</span>
+              <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                 Новости
               </span>
             </Link>
           </li>
           <li>
-            <a className="btn btn-primary nav-cta" href="#visit" onClick={closeMenu}>
-              <span className="en">Book a Free Tour</span>
-              <span className="ru" lang="ru">
+            <a
+              href="#visit"
+              onClick={closeMenu}
+              className="
+                inline-block no-underline text-center font-display font-bold text-base px-6.5 py-3 rounded-full border-none cursor-pointer
+                bg-sun text-sun-ink shadow-brand-soft transition-all duration-150
+                hover:-translate-y-0.5 hover:bg-sun-deep hover:shadow-brand max-[920px]:mt-2 max-[920px]:w-full
+              "
+            >
+              <span className={lang === "ru" ? "hidden" : "inline"}>Book a Free Tour</span>
+              <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                 Записаться на визит
               </span>
             </a>
           </li>
         </ul>
 
-        <button className="lang-toggle" aria-label="Switch language" onClick={toggle}>
+        <button
+          className="ml-2.5 max-[920px]:ml-0 border-2 border-sky bg-white rounded-full px-3 py-1 cursor-pointer font-bold text-[0.85rem] text-sky-deep transition-colors duration-150 hover:bg-sky-mist"
+          aria-label="Switch language"
+          onClick={toggle}
+        >
           {lang === "en" ? "RU" : "EN"}
         </button>
       </div>
