@@ -92,7 +92,13 @@ export default function Footer() {
                   aria-label="Instagram"
                   className="text-[#c6cede] no-underline hover:text-sun"
                 >
-                  <svg className="w-5.5 h-5.5 inline-block align-[-6px] mr-1.5" aria-hidden="true">
+                  <svg
+                    className="w-5.5 h-5.5 inline-block align-[-6px] mr-1.5"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
                     <use href="#i-instagram" />
                   </svg>
                   @lalalandkids_fostercity

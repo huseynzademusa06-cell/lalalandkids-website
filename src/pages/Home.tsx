@@ -12,4 +12,6 @@ export default function Home() {
       }, 100);
     }
   }, [location]);
+
+  return <h1 className="text-3xl font-bold">Home page</h1>;
 }
