@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../context/languageContext";
-import logoImg from "/public/assets/logo.jpg";
+import logoImg from "../../assets/logo.jpg";
+import AnchorLink from "./AnchorLink";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -53,8 +54,8 @@ export default function Header() {
         `}
         >
           <li>
-            <a
-              href="#about"
+            <AnchorLink
+              to="about"
               onClick={closeMenu}
               className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
             >
@@ -62,11 +63,11 @@ export default function Header() {
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                 О нас
               </span>
-            </a>
+            </AnchorLink>
           </li>
           <li>
-            <a
-              href="#day"
+            <AnchorLink
+              to="day"
               onClick={closeMenu}
               className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
             >
@@ -74,11 +75,11 @@ export default function Header() {
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                 Наш день
               </span>
-            </a>
+            </AnchorLink>
           </li>
           <li>
-            <a
-              href="#programs"
+            <AnchorLink
+              to="programs"
               onClick={closeMenu}
               className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
             >
@@ -86,7 +87,7 @@ export default function Header() {
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                 Программы
               </span>
-            </a>
+            </AnchorLink>
           </li>
           <li>
             <Link
@@ -125,8 +126,8 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <a
-              href="#visit"
+            <AnchorLink
+              to="#visit"
               onClick={closeMenu}
               className="
                 inline-block no-underline text-center font-display font-bold text-base px-6.5 py-3 rounded-full border-none cursor-pointer
@@ -138,7 +139,7 @@ export default function Header() {
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                 Записаться на визит
               </span>
-            </a>
+            </AnchorLink>
           </li>
         </ul>
 
