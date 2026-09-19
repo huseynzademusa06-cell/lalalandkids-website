@@ -70,7 +70,7 @@ export default function IconSprite() {
       </symbol>
       <symbol id="i-clock" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="8.8" />
-        <path d="M12 7.2v4.8l3.4 2" />
+        <path d="M12 7.2v4.8l3.4 3" />
       </symbol>
       <symbol id="i-moon" viewBox="0 0 24 24">
         <path d="M20 14.8A8.7 8.7 0 1 1 9.2 4 7.2 7.2 0 0 0 20 14.8Z" />

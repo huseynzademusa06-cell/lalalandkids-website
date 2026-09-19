@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Hero from "../components/sections/Hero";
 
 export default function Home() {
   const location = useLocation();
@@ -13,5 +14,9 @@ export default function Home() {
     }
   }, [location]);
 
-  return <h1 className="text-3xl font-bold">Home page</h1>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 }
