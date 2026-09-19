@@ -57,7 +57,7 @@ export default function Header() {
             <AnchorLink
               to="about"
               onClick={closeMenu}
-              className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+              className="no-underline text-ink font-display font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
             >
               <span className={lang === "ru" ? "hidden" : "inline"}>About</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
@@ -69,7 +69,7 @@ export default function Header() {
             <AnchorLink
               to="day"
               onClick={closeMenu}
-              className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+              className="no-underline text-ink font-display font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
             >
               <span className={lang === "ru" ? "hidden" : "inline"}>Our Day</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
@@ -81,7 +81,7 @@ export default function Header() {
             <AnchorLink
               to="programs"
               onClick={closeMenu}
-              className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+              className="no-underline text-ink font-display font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
             >
               <span className={lang === "ru" ? "hidden" : "inline"}>Programs</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
@@ -93,7 +93,7 @@ export default function Header() {
             <Link
               to="/testimonials"
               onClick={closeMenu}
-              className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+              className="no-underline text-ink font-display font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
             >
               <span className={lang === "ru" ? "hidden" : "inline"}>Testimonials</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
@@ -105,7 +105,7 @@ export default function Header() {
             <Link
               to="/gallery"
               onClick={closeMenu}
-              className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+              className="no-underline text-ink font-display font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
             >
               <span className={lang === "ru" ? "hidden" : "inline"}>Gallery</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
@@ -117,7 +117,7 @@ export default function Header() {
             <Link
               to="/newsletter"
               onClick={closeMenu}
-              className="no-underline text-ink font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+              className="no-underline text-ink font-display font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
             >
               <span className={lang === "ru" ? "hidden" : "inline"}>News &amp; Blog</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
@@ -130,7 +130,7 @@ export default function Header() {
               to="#visit"
               onClick={closeMenu}
               className="
-                inline-block no-underline text-center font-display font-bold text-base px-6.5 py-3 rounded-full border-none cursor-pointer
+                inline-block no-underline text-center font-display font-bold text-base px-3 py-2 rounded-full border-none cursor-pointer
                 bg-sun text-sun-ink shadow-brand-soft transition-all duration-150
                 hover:-translate-y-0.5 hover:bg-sun-deep hover:shadow-brand max-[920px]:mt-2 max-[920px]:w-full
               "
