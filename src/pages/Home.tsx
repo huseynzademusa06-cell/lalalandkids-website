@@ -6,6 +6,7 @@ import About from "../components/sections/About";
 import VideoReels from "../components/sections/VideoReels";
 import Activities from "../components/sections/Activities";
 import Skills from "../components/sections/Skills";
+import Schedule from "../components/sections/Schedule";
 
 export default function Home() {
   const location = useLocation();
@@ -27,6 +28,7 @@ export default function Home() {
       <VideoReels />
       <Activities />
       <Skills />
+      <Schedule />
     </main>
   );
 }
