@@ -11,7 +11,7 @@ export default function Nutrition() {
       descEn: "Three full meals and two snacks, every day.",
       descRu: "Три основных приёма пищи и два перекуса — каждый день.",
       border: "border-mint",
-      iconColor: "text-mint-deep",
+      iconColor: "text-sky-deep",
     },
     {
       icon: "i-leaf",
@@ -29,7 +29,7 @@ export default function Nutrition() {
       descEn: "Fresh vegetables, fruits, whole grains, proteins, yogurt, milk, and eggs.",
       descRu: "Свежие овощи, фрукты, цельнозерновые продукты, белки, йогурт, молоко и яйца.",
       border: "border-pink",
-      iconColor: "text-pink-deep",
+      iconColor: "text-sky-deep",
     },
   ];
 
