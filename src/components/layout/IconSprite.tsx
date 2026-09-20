@@ -12,7 +12,7 @@ export default function IconSprite() {
       </symbol>
       <symbol id="i-bulb" viewBox="0 0 24 24">
         <path d="M9.5 17.5v-1.6c0-1-.6-1.8-1.3-2.6a5.8 5.8 0 1 1 7.6 0c-.7.8-1.3 1.6-1.3 2.6v1.6Z" />
-        <path d="M9.5 20.5h5" />
+        <path d="M8.5 20.5h7" />
       </symbol>
       <symbol id="i-smile" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="8.5" />
