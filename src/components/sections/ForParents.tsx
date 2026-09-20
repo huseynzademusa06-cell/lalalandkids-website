@@ -12,7 +12,7 @@ export default function ForParents() {
         "Feeding off schedule, earlier naps or wake-ups, flexible attendance — we adapt to your child, not the other way around.",
       descRu:
         "Кормление вне расписания, ранний сон или подъём, гибкий график посещения — мы подстраиваемся под вашего ребёнка.",
-      border: "border-grape",
+      border: "border-sky",
       iconColor: "text-sky-deep",
     },
     {
@@ -34,7 +34,7 @@ export default function ForParents() {
         "Secure video surveillance, restricted electronic access, child-proofed rooms, HEPA air filtration, and CPR/first-aid trained staff.",
       descRu:
         "Видеонаблюдение, электронный пропуск с ограниченным доступом, безопасные помещения, HEPA-фильтрация воздуха и персонал, обученный первой помощи.",
-      border: "border-mint",
+      border: "border-sky",
       iconColor: "text-sky-deep",
     },
   ];
