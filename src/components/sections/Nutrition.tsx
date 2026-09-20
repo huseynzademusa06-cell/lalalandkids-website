@@ -37,7 +37,7 @@ export default function Nutrition() {
     <section id="nutrition" className="py-19 bg-cloud">
       <div className="w-[min(1240px,94.5%)] mx-auto">
         <div className="text-center max-w-175 mx-auto mb-11.5">
-          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-mint-mist text-mint-deep">
+          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-deep">
             <span className={lang === "ru" ? "hidden" : "inline"}>Nutrition</span>
             <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
               Питание
