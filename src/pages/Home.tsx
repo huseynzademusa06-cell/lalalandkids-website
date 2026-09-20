@@ -8,6 +8,7 @@ import Activities from "../components/sections/Activities";
 import Skills from "../components/sections/Skills";
 import Schedule from "../components/sections/Schedule";
 import Nutrition from "../components/sections/Nutrition";
+import ForParents from "../components/sections/ForParents";
 
 export default function Home() {
   const location = useLocation();
@@ -31,6 +32,7 @@ export default function Home() {
       <Skills />
       <Schedule />
       <Nutrition />
+      <ForParents />
     </main>
   );
 }
