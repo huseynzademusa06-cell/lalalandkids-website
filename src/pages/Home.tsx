@@ -7,6 +7,7 @@ import VideoReels from "../components/sections/VideoReels";
 import Activities from "../components/sections/Activities";
 import Skills from "../components/sections/Skills";
 import Schedule from "../components/sections/Schedule";
+import Nutrition from "../components/sections/Nutrition";
 
 export default function Home() {
   const location = useLocation();
@@ -29,6 +30,7 @@ export default function Home() {
       <Activities />
       <Skills />
       <Schedule />
+      <Nutrition />
     </main>
   );
 }
