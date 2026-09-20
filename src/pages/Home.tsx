@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Hero from "../components/sections/Hero";
 import TrustBar from "../components/sections/TrustBar";
 import About from "../components/sections/About";
+import VideoReels from "../components/sections/VideoReels";
 
 export default function Home() {
   const location = useLocation();
@@ -21,6 +22,7 @@ export default function Home() {
       <Hero />
       <TrustBar />
       <About />
+      <VideoReels />
     </main>
   );
 }
