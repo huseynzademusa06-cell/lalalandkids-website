@@ -11,6 +11,7 @@ import Nutrition from "../components/sections/Nutrition";
 import ForParents from "../components/sections/ForParents";
 import Programs from "../components/sections/Programs";
 import FAQ from "../components/sections/FAQ";
+import Visit from "../components/sections/Visit";
 
 export default function Home() {
   const location = useLocation();
@@ -37,6 +38,7 @@ export default function Home() {
       <ForParents />
       <Programs />
       <FAQ />
+      <Visit />
     </main>
   );
 }
