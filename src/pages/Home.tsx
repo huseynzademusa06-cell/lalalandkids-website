@@ -12,6 +12,7 @@ import ForParents from "../components/sections/ForParents";
 import Programs from "../components/sections/Programs";
 import FAQ from "../components/sections/FAQ";
 import Visit from "../components/sections/Visit";
+import CtaBand from "../components/sections/CtaBand";
 
 export default function Home() {
   const location = useLocation();
@@ -39,6 +40,7 @@ export default function Home() {
       <Programs />
       <FAQ />
       <Visit />
+      <CtaBand />
     </main>
   );
 }
