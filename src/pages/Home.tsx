@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Hero from "../components/sections/Hero";
+import TrustBar from "../components/sections/TrustBar";
 
 export default function Home() {
   const location = useLocation();
@@ -15,8 +16,9 @@ export default function Home() {
   }, [location]);
 
   return (
-    <main>
+    <main className="font-body">
       <Hero />
+      <TrustBar />
     </main>
   );
 }
