@@ -10,6 +10,7 @@ import Schedule from "../components/sections/Schedule";
 import Nutrition from "../components/sections/Nutrition";
 import ForParents from "../components/sections/ForParents";
 import Programs from "../components/sections/Programs";
+import FAQ from "../components/sections/FAQ";
 
 export default function Home() {
   const location = useLocation();
@@ -35,6 +36,7 @@ export default function Home() {
       <Nutrition />
       <ForParents />
       <Programs />
+      <FAQ />
     </main>
   );
 }
