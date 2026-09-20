@@ -5,6 +5,7 @@ import TrustBar from "../components/sections/TrustBar";
 import About from "../components/sections/About";
 import VideoReels from "../components/sections/VideoReels";
 import Activities from "../components/sections/Activities";
+import Skills from "../components/sections/Skills";
 
 export default function Home() {
   const location = useLocation();
@@ -25,6 +26,7 @@ export default function Home() {
       <About />
       <VideoReels />
       <Activities />
+      <Skills />
     </main>
   );
 }
