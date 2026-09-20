@@ -1,14 +1,27 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "../../context/languageContext";
 import logoImg from "../../assets/logo.jpg";
 import AnchorLink from "./AnchorLink";
+import { useActiveSection } from "../../hooks/useActiveSection";
+
+const SECTION_IDS = ["about", "day", "programs"];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { lang, toggle } = useLanguage();
+  const location = useLocation();
+  const activeSection = useActiveSection(SECTION_IDS);
 
   const closeMenu = () => setMenuOpen(false);
+  const isHome = location.pathname === "/";
+  const isSectionActive = (id: string) => isHome && activeSection === id;
+  const isRouteActive = (path: string) => location.pathname === path;
+
+  const linkClass = (active: boolean) =>
+    `no-underline font-display font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap ${
+      active ? "bg-sun-mist text-sun-deep" : "text-ink hover:bg-sky-mist hover:text-sky-deep"
+    }`;
 
   return (
     <header className="sticky top-0 z-50 bg-cream/94 backdrop-blur-md border-b-3 border-transparent [border-image:var(--rainbow,linear-gradient(to_right,#45beea,#f7b32b))_1]">
@@ -57,7 +70,7 @@ export default function Header() {
             <AnchorLink
               to="about"
               onClick={closeMenu}
-              className="no-underline text-ink font-display font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+              className={linkClass(isSectionActive("about"))}
             >
               <span className={lang === "ru" ? "hidden" : "inline"}>About</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
@@ -66,11 +79,7 @@ export default function Header() {
             </AnchorLink>
           </li>
           <li>
-            <AnchorLink
-              to="day"
-              onClick={closeMenu}
-              className="no-underline text-ink font-display font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
-            >
+            <AnchorLink to="day" onClick={closeMenu} className={linkClass(isSectionActive("day"))}>
               <span className={lang === "ru" ? "hidden" : "inline"}>Our Day</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                 Наш день
@@ -81,7 +90,7 @@ export default function Header() {
             <AnchorLink
               to="programs"
               onClick={closeMenu}
-              className="no-underline text-ink font-display font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+              className={linkClass(isSectionActive("programs"))}
             >
               <span className={lang === "ru" ? "hidden" : "inline"}>Programs</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
@@ -93,7 +102,7 @@ export default function Header() {
             <Link
               to="/testimonials"
               onClick={closeMenu}
-              className="no-underline text-ink font-display font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+              className={linkClass(isRouteActive("/testimonials"))}
             >
               <span className={lang === "ru" ? "hidden" : "inline"}>Testimonials</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
@@ -105,7 +114,7 @@ export default function Header() {
             <Link
               to="/gallery"
               onClick={closeMenu}
-              className="no-underline text-ink font-display font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+              className={linkClass(isRouteActive("/gallery"))}
             >
               <span className={lang === "ru" ? "hidden" : "inline"}>Gallery</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
@@ -117,7 +126,7 @@ export default function Header() {
             <Link
               to="/newsletter"
               onClick={closeMenu}
-              className="no-underline text-ink font-display font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap hover:bg-sky-mist hover:text-sky-deep"
+              className={linkClass(isRouteActive("/newsletter"))}
             >
               <span className={lang === "ru" ? "hidden" : "inline"}>News &amp; Blog</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
