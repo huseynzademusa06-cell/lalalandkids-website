@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import AnchorLink from "../components/layout/AnchorLink";
+import SEO from "../components/SEO";
 
 function ContactAside() {
   return (
@@ -338,6 +339,11 @@ const toc = [
 export default function Newsletter() {
   return (
     <main className="font-body">
+      <SEO
+        title="News & Blog - Lala Land, Foster City"
+        description="The Lala Letter - a newsletter and blog for young moms: daycare tips, bilingual parenting, safety, and best practices from Lala Land in Foster City, CA."
+        path="/newsletter"
+      />
       <section className="pt-12 pb-19">
         <div className="w-[min(1240px,94.5%)] mx-auto">
           <div className="rounded-brand text-white p-11 grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-9 items-center shadow-brand bg-[linear-gradient(135deg,#1a86b4,#156f96)]">

@@ -1,4 +1,5 @@
 import AnchorLink from "../components/layout/AnchorLink";
+import SEO from "../components/SEO";
 
 const reels = [
   {
@@ -21,6 +22,11 @@ const reels = [
 export default function Testimonials() {
   return (
     <main className="font-body">
+      <SEO
+        title="Parent Testimonials - Lala Land, Foster City"
+        description="What parents say about Lala Land - a multilingual family daycare and preschool in Foster City, CA (English-focused, with Turkish, Azerbaijani, and Russian)."
+        path="/testimonials"
+      />
       <section className="text-center pt-14 pb-16 bg-[radial-gradient(circle_at_85%_12%,rgba(69,190,234,0.14),transparent_38%),linear-gradient(180deg,#eaf7fd,#fffdf8)]">
         <div className="w-[min(1240px,94.5%)] mx-auto">
           <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-deep">
