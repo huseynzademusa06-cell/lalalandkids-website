@@ -31,6 +31,9 @@ export default function Header() {
             src={logoImg}
             alt="Lala Land logo — friendly dragon under a rainbow"
             className="w-15.5 h-auto rounded-brand-sm"
+            width="512"
+            height="455"
+            loading="eager"
           />
           <span className="font-display font-extrabold text-[1.3rem] text-sky-deep leading-tight whitespace-nowrap">
             Lala Land

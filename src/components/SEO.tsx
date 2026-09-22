@@ -19,7 +19,7 @@ export default function SEO({
   image = DEFAULT_IMAGE,
   children,
 }: SEOProps) {
-  const url = `${SITE_URL}${path === "/" ? "/" : path}`;
+  const url = `${SITE_URL}${path}`;
 
   return (
     <Head>

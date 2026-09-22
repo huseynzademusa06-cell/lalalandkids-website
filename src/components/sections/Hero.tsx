@@ -12,6 +12,9 @@ export default function Hero() {
           src={logoImg}
           alt="Lala Land — Child Care &amp; Preschool"
           className="w-[min(280px,60vw)] mx-auto mb-6 rounded-[30px] filter-[drop-shadow(0_12px_24px_rgba(69,190,234,0.25))]"
+          width="512"
+          height="455"
+          loading="eager"
         />
 
         <h1 className="font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(2.1rem,5vw,3.4rem)] mb-3.5">

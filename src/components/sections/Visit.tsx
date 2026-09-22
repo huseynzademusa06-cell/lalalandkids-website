@@ -178,7 +178,14 @@ export default function Visit() {
           {/* Right column: provider reassurance card + map */}
           <div>
             <div className="bg-white rounded-brand shadow-brand-soft border-t-[5px] border-sky mb-4.5 p-5.5 flex gap-4.5 items-center flex-wrap transition-all duration-200 hover:-translate-y-1 hover:shadow-brand">
-              <img src={logoImg} alt="Lala Land" className="w-21.5 rounded-brand-sm flex-none" />
+              <img
+                src={logoImg}
+                alt="Lala Land"
+                className="w-21.5 rounded-brand-sm flex-none"
+                width="512"
+                height="455"
+                loading="lazy"
+              />
               <div className="flex-1 min-w-55">
                 <h3 className="mb-1 font-display font-extrabold text-ink text-[1.25rem]">
                   <span className={lang === "ru" ? "hidden" : "inline"}>

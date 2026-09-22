@@ -80,6 +80,9 @@ export default function About() {
             src={logoImg}
             alt="Lala Land"
             className="w-[min(300px,70%)] rounded-[26px] shadow-brand"
+            width="512"
+            height="455"
+            loading="lazy"
           />
         </div>
       </div>
