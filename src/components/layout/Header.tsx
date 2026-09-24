@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "../../context/languageContext";
-import logoImg from "../../assets/logo.jpg";
 import AnchorLink from "./AnchorLink";
 import { useActiveSection } from "../../hooks/useActiveSection";
+import logoSrcSet from "../../assets/logo.jpg?w=62;124&format=webp&as=srcset";
+import logoFallback from "../../assets/logo.jpg?w=62&format=webp";
 
 const SECTION_IDS = ["about", "day", "programs"];
 
@@ -28,12 +29,14 @@ export default function Header() {
       <div className="w-[min(1240px,94.5%)] mx-auto flex items-center gap-5 py-2.5 relative">
         <Link className="flex items-center gap-3 no-underline" to="/" onClick={closeMenu}>
           <img
-            src={logoImg}
+            src={logoFallback}
+            srcSet={logoSrcSet}
             alt="Lala Land logo — friendly dragon under a rainbow"
             className="w-15.5 h-auto rounded-brand-sm"
-            width="512"
-            height="455"
+            width="62"
+            height="55"
             loading="eager"
+            fetchPriority="high"
           />
           <span className="font-display font-extrabold text-[1.3rem] text-sky-deep leading-tight whitespace-nowrap">
             Lala Land

@@ -1,5 +1,6 @@
 import { useLanguage } from "../../context/languageContext";
-import logoImg from "../../assets/logo.jpg";
+import logoSrcSet from "../../assets/logo.jpg?w=300;600&format=webp&as=srcset";
+import logoFallback from "../../assets/logo.jpg?w=300&format=webp";
 
 export default function About() {
   const { lang } = useLanguage();
@@ -77,12 +78,13 @@ export default function About() {
         {/* PLACEHOLDER: replace with a real photo*/}
         <div className="rounded-brand overflow-hidden shadow-brand aspect-4/5 flex items-center justify-center bg-[linear-gradient(160deg,#eaf7fd,#fbd9e9_55%,#fdf3dc)] text-center p-7.5 text-ink-soft font-bold">
           <img
-            src={logoImg}
+            src={logoFallback}
+            srcSet={logoSrcSet}
+            sizes="(min-width: 768px) 300px, 70vw"
             alt="Lala Land"
-            className="w-[min(300px,70%)] rounded-[26px] shadow-brand"
-            width="512"
-            height="455"
-            loading="lazy"
+            width="300"
+            height="267"
+            className="rounded-[26px] shadow-brand"
           />
         </div>
       </div>

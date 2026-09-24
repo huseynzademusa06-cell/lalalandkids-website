@@ -1,6 +1,7 @@
 import { useLanguage } from "../../context/languageContext";
 import AnchorLink from "../layout/AnchorLink";
-import logoImg from "../../assets/logo.jpg";
+import logoSrcSet from "../../assets/logo.jpg?w=280;560&format=webp&as=srcset";
+import logoFallback from "../../assets/logo.jpg?w=280&format=webp";
 
 export default function Hero() {
   const { lang } = useLanguage();
@@ -9,12 +10,15 @@ export default function Hero() {
     <section className="relative overflow-hidden text-center pt-17.5 pb-22.5 bg-[radial-gradient(circle_at_85%_12%,rgba(69,190,234,0.14),transparent_38%),linear-gradient(180deg,#eaf7fd,#fffdf8)]">
       <div className="w-[min(1240px,94.5%)] mx-auto">
         <img
-          src={logoImg}
-          alt="Lala Land — Child Care &amp; Preschool"
-          className="w-[min(280px,60vw)] mx-auto mb-6 rounded-[30px] filter-[drop-shadow(0_12px_24px_rgba(69,190,234,0.25))]"
-          width="512"
-          height="455"
+          src={logoFallback}
+          srcSet={logoSrcSet}
+          sizes="(min-width: 768px) 300px, 70vw"
+          alt="Lala Land"
+          width="280"
+          height="249"
+          className="rounded-[30px] shadow-brand mx-auto mb-6"
           loading="eager"
+          fetchPriority="high"
         />
 
         <h1 className="font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(2.1rem,5vw,3.4rem)] mb-3.5">
