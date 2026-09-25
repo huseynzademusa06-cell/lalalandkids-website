@@ -8,7 +8,7 @@ export default function Programs() {
     <section id="programs" className="py-19 bg-cloud">
       <div className="w-[min(1240px,94.5%)] mx-auto">
         <div className="text-center max-w-175 mx-auto mb-11.5">
-          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-deep">
+          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean">
             <span className={lang === "ru" ? "hidden" : "inline"}>Programs</span>
             <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
               Программы
@@ -261,7 +261,7 @@ export default function Programs() {
 
           <a
             href="tel:+14153505015"
-            className="inline-block text-center font-display font-bold text-base px-6.5 py-3 rounded-full bg-white text-sky-deep border-2 border-sky transition-all duration-150 hover:-translate-y-0.5 hover:shadow-brand"
+            className="inline-block text-center font-display font-bold text-base px-6.5 py-3 rounded-full bg-white text-sky-ocean border-2 border-sky transition-all duration-150 hover:-translate-y-0.5 hover:shadow-brand"
           >
             <span className={lang === "ru" ? "hidden" : "inline"}>Call (415) 350-5015</span>
             <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">

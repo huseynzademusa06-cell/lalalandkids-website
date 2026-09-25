@@ -66,7 +66,7 @@ export default function Schedule() {
     <section id="day" className="py-19">
       <div className="w-[min(1240px,94.5%)] mx-auto">
         <div className="text-center max-w-175 mx-auto mb-11.5">
-          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-deep">
+          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean">
             <span className={lang === "ru" ? "hidden" : "inline"}>Schedule</span>
             <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
               Расписание
@@ -105,7 +105,7 @@ export default function Schedule() {
                     key={j}
                     className={`flex gap-3 py-2 text-[0.93rem] ${j > 0 ? "border-t border-cloud" : ""}`}
                   >
-                    <time className="font-extrabold text-sky-deep whitespace-nowrap flex-none w-27">
+                    <time className="font-extrabold text-sky-ocean whitespace-nowrap flex-none w-27">
                       {item.time}
                     </time>
                     <span className={lang === "ru" ? "hidden" : "inline"}>{item.en}</span>
@@ -122,14 +122,14 @@ export default function Schedule() {
         <p className="text-center mt-6.5 text-ink-soft text-[0.95rem]">
           <span className={lang === "ru" ? "hidden" : "inline"}>
             After-hours care is available by appointment —{" "}
-            <a href="#visit" className="text-sky-deep">
+            <a href="#visit" className="text-sky-ocean">
               contact us
             </a>
             .
           </span>
           <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
             Присмотр в нерабочие часы — по записи,{" "}
-            <AnchorLink to="visit" className="text-sky-deep">
+            <AnchorLink to="visit" className="text-sky-ocean">
               contact us
             </AnchorLink>
             .

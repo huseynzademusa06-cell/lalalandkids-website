@@ -6,7 +6,7 @@ export default function CtaBand() {
   const { lang } = useLanguage();
 
   return (
-    <section className="bg-[linear-gradient(120deg,#1e9ed4,#156f96)] text-center text-white py-16">
+    <section className="bg-sky-ocean text-center text-white py-16">
       <div className="w-[min(1240px,94.5%)] mx-auto">
         <h2 className="text-white mb-2.5 font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-[clamp(1.7rem,3.6vw,2.4rem)]">
           <span className={lang === "ru" ? "hidden" : "inline"}>
@@ -16,7 +16,7 @@ export default function CtaBand() {
             Выбор детского сада — большое решение.
           </span>
         </h2>
-        <p className="text-white/90 max-w-140 mx-auto mb-6.5">
+        <p className="text-white max-w-140 mx-auto mb-6.5">
           <span className={lang === "ru" ? "hidden" : "inline"}>
             Don’t decide from a website — come see a normal day with your own eyes. Meet us, ask us
             anything, and feel the difference the second you walk in. Openings and tuition are

@@ -28,7 +28,7 @@ export default function VideoReels() {
     <section id="videos" className="py-19 bg-cloud">
       <div className="w-[min(1240px,94.5%)] mx-auto">
         <div className="text-center max-w-175 mx-auto mb-11.5">
-          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-deep">
+          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean">
             <span className={lang === "ru" ? "hidden" : "inline"}>Watch</span>
             <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
               Видео
@@ -57,6 +57,7 @@ export default function VideoReels() {
               key={i}
               className="relative aspect-9/16 rounded-brand overflow-hidden shadow-brand flex flex-col items-center justify-center text-center p-6 text-white bg-[linear-gradient(160deg,#2ba5db,#156f96)]"
             >
+              <div className="absolute inset-0 bg-black/40"></div>
               <span className="absolute top-3.5 left-3.5 bg-black/35 text-[0.7rem] font-extrabold tracking-[0.08em] uppercase px-2.5 py-1 rounded-full">
                 <span className={lang === "ru" ? "hidden" : "inline"}>Video coming soon</span>
                 <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
@@ -66,13 +67,13 @@ export default function VideoReels() {
               <span className="w-16 h-16 rounded-full bg-white/92 flex items-center justify-center text-[1.5rem] text-ink mb-4 shadow-brand transition-transform duration-200 hover:scale-110">
                 ▶
               </span>
-              <h3 className="text-white text-[1.1rem] [text-shadow:0_2px_8px_rgba(0,0,0,0.25)]">
+              <h3 className="relative text-white text-[1.1rem]">
                 <span className={lang === "ru" ? "hidden" : "inline"}>{reel.titleEn}</span>
                 <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                   {reel.titleRu}
                 </span>
               </h3>
-              <p className="text-[0.85rem] opacity-92 mt-1.5 [text-shadow:0_1px_6px_rgba(0,0,0,0.25)]">
+              <p className="relative text-[0.85rem] mt-1.5">
                 <span className={lang === "ru" ? "hidden" : "inline"}>{reel.descEn}</span>
                 <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                   {reel.descRu}

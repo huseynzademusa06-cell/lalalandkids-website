@@ -23,12 +23,12 @@ export default function Hero() {
 
         <h1 className="font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(2.1rem,5vw,3.4rem)] mb-3.5">
           <span className={lang === "ru" ? "hidden" : "inline"}>
-            Welcome to <span className="text-sky-deep">Lala Land</span>&nbsp;—
+            Welcome to <span className="text-sky-ocean">Lala Land</span>&nbsp;—
             <br />
             where your child feels at home
           </span>
           <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
-            Добро пожаловать в <span className="text-sky-deep">Lala Land</span>&nbsp;—
+            Добро пожаловать в <span className="text-sky-ocean">Lala Land</span>&nbsp;—
             <br />
             место, где ваш ребёнок чувствует себя как дома
           </span>
@@ -69,7 +69,7 @@ export default function Hero() {
           </AnchorLink>
           <AnchorLink
             to="day"
-            className="inline-block text-center font-display font-bold text-[1.15rem] px-8.5 py-3.75 rounded-full bg-white text-sky-deep border-2 border-sky transition-all duration-150 hover:-translate-y-0.5 hover:shadow-brand"
+            className="inline-block text-center font-display font-bold text-[1.15rem] px-8.5 py-3.75 rounded-full bg-white text-sky-ocean border-2 border-sky transition-all duration-150 hover:-translate-y-0.5 hover:shadow-brand"
           >
             <span className={lang === "ru" ? "hidden" : "inline"}>See Our Day</span>
             <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
@@ -80,7 +80,7 @@ export default function Hero() {
 
         <div className="flex flex-wrap justify-center gap-x-7 gap-y-2.5 my-1.5 text-[0.95rem] font-body font-bold text-ink">
           <span className="inline-flex items-center gap-2">
-            <svg className="w-4.75 h-4.75 text-sky-deep flex-none">
+            <svg className="w-4.75 h-4.75 text-sky-ocean flex-none">
               <use href="#i-clock" fill="none" stroke="currentColor" strokeWidth="2" />
             </svg>
             <span className={lang === "ru" ? "hidden" : "inline"}>
@@ -91,7 +91,7 @@ export default function Hero() {
             </span>
           </span>
           <span className="inline-flex items-center gap-2">
-            <svg className="w-4.75 h-4.75 text-sky-deep flex-none">
+            <svg className="w-4.75 h-4.75 text-sky-ocean flex-none">
               <use href="#i-pin" fill="none" stroke="currentColor" strokeWidth="2" />
             </svg>
 
@@ -99,16 +99,16 @@ export default function Hero() {
               href="https://maps.google.com/?q=842+Chrysopolis+Dr,+Foster+City,+CA+94404"
               target="_blank"
               rel="noopener"
-              className="text-ink no-underline hover:text-sky-deep"
+              className="text-ink no-underline hover:text-sky-ocean"
             >
               842 Chrysopolis Dr, Foster City
             </a>
           </span>
           <span className="inline-flex items-center gap-2">
-            <svg className="w-4.75 h-4.75 text-sky-deep flex-none">
+            <svg className="w-4.75 h-4.75 text-sky-ocean flex-none">
               <use href="#i-phone" fill="none" stroke="currentColor" strokeWidth="2" />
             </svg>
-            <a href="tel:+14153505015" className="text-ink no-underline hover:text-sky-deep">
+            <a href="tel:+14153505015" className="text-ink no-underline hover:text-sky-ocean">
               (415) 350-5015
             </a>
           </span>

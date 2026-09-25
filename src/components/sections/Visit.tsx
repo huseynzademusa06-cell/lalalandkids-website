@@ -8,7 +8,7 @@ export default function Visit() {
     <section id="visit" className="py-19 bg-cloud">
       <div className="w-[min(1240px,94.5%)] mx-auto">
         <div className="text-center max-w-175 mx-auto mb-11.5">
-          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-deep">
+          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean">
             <span className={lang === "ru" ? "hidden" : "inline"}>Visit Us</span>
             <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
               Приходите к нам
@@ -37,7 +37,7 @@ export default function Visit() {
           <div>
             <ul className="list-none">
               <li className="flex gap-3.5 py-3 items-start">
-                <span className="flex-none w-8.5 text-center text-sky-deep">
+                <span className="flex-none w-8.5 text-center text-sky-ocean">
                   <svg className="w-5.5 h-5.5 stroke-current fill-none stroke-2 inline-block">
                     <use href="#i-phone" />
                   </svg>
@@ -49,13 +49,13 @@ export default function Visit() {
                       Телефон
                     </span>
                   </strong>
-                  <a href="tel:+14153505015" className="font-bold no-underline text-sky-deep">
+                  <a href="tel:+14153505015" className="font-bold no-underline text-sky-ocean">
                     (415) 350-5015
                   </a>
                 </div>
               </li>
               <li className="flex gap-3.5 py-3 items-start">
-                <span className="flex-none w-8.5 text-center text-sky-deep">
+                <span className="flex-none w-8.5 text-center text-sky-ocean">
                   <svg className="w-5.5 h-5.5 stroke-current fill-none stroke-2 inline-block">
                     <use href="#i-pin" />
                   </svg>
@@ -71,7 +71,7 @@ export default function Visit() {
                 </div>
               </li>
               <li className="flex gap-3.5 py-3 items-start">
-                <span className="flex-none w-8.5 text-center text-sky-deep">
+                <span className="flex-none w-8.5 text-center text-sky-ocean">
                   <svg className="w-5.5 h-5.5 stroke-current fill-none stroke-2 inline-block">
                     <use href="#i-clock" />
                   </svg>
@@ -92,7 +92,7 @@ export default function Visit() {
                 </div>
               </li>
               <li className="flex gap-3.5 py-3 items-start">
-                <span className="flex-none w-8.5 text-center text-sky-deep">
+                <span className="flex-none w-8.5 text-center text-sky-ocean">
                   <svg className="w-5.5 h-5.5 stroke-current fill-none stroke-2 inline-block">
                     <use href="#i-instagram" />
                   </svg>
@@ -104,7 +104,7 @@ export default function Visit() {
                     href="https://www.instagram.com/lalalandkids_fostercity"
                     target="_blank"
                     rel="noopener"
-                    className="font-bold no-underline text-sky-deep"
+                    className="font-bold no-underline text-sky-ocean"
                   >
                     @lalalandkids_fostercity
                   </a>
@@ -155,7 +155,7 @@ export default function Visit() {
                   target="_blank"
                   rel="noopener"
                   aria-label="Message us on Instagram"
-                  className="inline-flex items-center justify-center w-12 h-12 rounded-full flex-none border-2 border-sky text-sky-deep bg-white transition-all duration-150 hover:-translate-y-0.5 hover:bg-sky-mist"
+                  className="inline-flex items-center justify-center w-12 h-12 rounded-full flex-none border-2 border-sky text-sky-ocean bg-white transition-all duration-150 hover:-translate-y-0.5 hover:bg-sky-mist"
                 >
                   <svg className="w-6 h-6 stroke-current fill-none stroke-2">
                     <use href="#i-instagram" />

@@ -29,7 +29,7 @@ export default function Testimonials() {
       />
       <section className="text-center pt-14 pb-16 bg-[radial-gradient(circle_at_85%_12%,rgba(69,190,234,0.14),transparent_38%),linear-gradient(180deg,#eaf7fd,#fffdf8)]">
         <div className="w-[min(1240px,94.5%)] mx-auto">
-          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-deep">
+          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean">
             Parent Voices
           </span>
           <h1 className="font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(2.1rem,5vw,3.4rem)] mb-3.5">
@@ -43,7 +43,7 @@ export default function Testimonials() {
           </p>
           <p className="text-[0.95rem] text-ink-soft" lang="ru">
             Говорим по-русски — звоните:{" "}
-            <a href="tel:+14153505015" className="text-sky-deep">
+            <a href="tel:+14153505015" className="text-sky-ocean">
               (415) 350-5015
             </a>
             .
@@ -62,7 +62,7 @@ export default function Testimonials() {
       <section id="video-voices" className="py-19">
         <div className="w-[min(1240px,94.5%)] mx-auto">
           <div className="text-center max-w-175 mx-auto mb-11.5">
-            <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-deep">
+            <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean">
               Watch
             </span>
             <h2 className="font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3">
@@ -102,7 +102,7 @@ export default function Testimonials() {
       {/* Written testimonials return once real, permissioned parent quotes exist */}
       <section id="quotes" className="py-19 bg-cloud">
         <div className="w-[min(700px,94.5%)] mx-auto text-center">
-          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-deep">
+          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean">
             In Their Words
           </span>
           <h2 className="font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3">
@@ -127,12 +127,12 @@ export default function Testimonials() {
         </div>
       </section>
 
-      <section className="bg-[linear-gradient(120deg,#1e9ed4,#156f96)] text-center text-white py-16">
+      <section className="bg-sky-ocean text-center text-white py-16">
         <div className="w-[min(1240px,94.5%)] mx-auto">
           <h2 className="text-white mb-2.5 font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)]">
             The best testimonial is a visit.
           </h2>
-          <p className="text-white/90 max-w-140 mx-auto mb-6.5">
+          <p className="text-white max-w-140 mx-auto mb-6.5">
             Come meet the family behind Lala Land — and your little one goes home with a dragon.
             Openings and tuition are discussed at your tour.
           </p>

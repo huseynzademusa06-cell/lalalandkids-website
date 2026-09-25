@@ -42,7 +42,7 @@ export default function FAQ() {
         <>
           Every family’s schedule is a little different, so we go over tuition in person at your
           free tour — no surprises, no pressure. Prefer the phone? Call{" "}
-          <a href="tel:+14153505015" className="text-sky-deep">
+          <a href="tel:+14153505015" className="text-sky-ocean">
             (415) 350-5015
           </a>
           .
@@ -52,7 +52,7 @@ export default function FAQ() {
         <>
           График каждой семьи индивидуален, поэтому стоимость мы обсуждаем лично на бесплатном
           визите — без сюрпризов и давления. Удобнее по телефону? Звоните:{" "}
-          <a href="tel:+14153505015" className="text-sky-deep">
+          <a href="tel:+14153505015" className="text-sky-ocean">
             (415) 350-5015
           </a>
           .
@@ -77,7 +77,7 @@ export default function FAQ() {
     <section id="faq" className="py-19">
       <div className="w-[min(820px,94.5%)] mx-auto">
         <div className="text-center max-w-175 mx-auto mb-11.5">
-          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sun-mist text-sun-deep">
+          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sun-mist text-sun-text">
             <span className={lang === "ru" ? "hidden" : "inline"}>Questions</span>
             <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
               Вопросы

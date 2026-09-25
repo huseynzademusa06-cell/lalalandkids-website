@@ -8,7 +8,7 @@ function ContactAside() {
       <p className="m-0 text-ink">
         <strong>Questions about daycare in Foster City?</strong> Come see a real day at Lala Land —
         free tours, and we discuss openings and tuition in person.{" "}
-        <a href="tel:+14153505015" className="text-sky-deep">
+        <a href="tel:+14153505015" className="text-sky-ocean">
           Call or text (415) 350-5015
         </a>
         .
@@ -47,7 +47,7 @@ const posts: Post[] = [
           questions before you tour <em>any</em> daycare — ours included. And if a provider dodges
           the last one, walk away.
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold ">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold ">
           1. What’s your teacher-to-child ratio?
         </h3>
         <p>
@@ -55,19 +55,19 @@ const posts: Post[] = [
           Small groups aren’t a luxury — for babies and toddlers, they’re the whole game. Ask for
           the number, not a vibe.
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">
           2. What does my kid actually do all day?
         </h3>
         <p>
           You want a real answer: a rhythm of meals, naps, outdoor time, reading, music, and
           hands-on play. You do <em>not</em> want screen time dressed up as "learning apps." Ask to
           see the daily schedule in writing — a good provider has one and is proud of it. (Ours is{" "}
-          <AnchorLink to="day" className="text-sky-deep">
+          <AnchorLink to="day" className="text-sky-ocean">
             right here
           </AnchorLink>
           .)
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">
           3. Can I come see a normal day, unannounced?
         </h3>
         <p>
@@ -78,7 +78,7 @@ const posts: Post[] = [
         <p>
           <AnchorLink
             to="visit"
-            className="inline-block font-display font-bold px-5 py-2.5 rounded-full bg-white text-sky-deep border-2 border-sky"
+            className="inline-block font-display font-bold px-5 py-2.5 rounded-full bg-white text-sky-ocean border-2 border-sky"
           >
             Ask us all three on a free tour →
           </AnchorLink>
@@ -97,7 +97,7 @@ const posts: Post[] = [
           Nobody warns you that the first daycare drop-off is harder for mom than for baby. Here’s
           what actually helps, from our own experience as moms — and many first weeks we’ve guided.
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">
           Start the routine a week early
         </h3>
         <p>
@@ -105,7 +105,7 @@ const posts: Post[] = [
           first day. A child who isn’t hungry and overtired on day one has a completely different
           first week.
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">
           Do a short goodbye — and mean it
         </h3>
         <p>
@@ -114,21 +114,21 @@ const posts: Post[] = [
           drop-off usually stops within minutes — ask your provider to text you a photo once your
           child settles. (We send them daily.)
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">
           Send a piece of home
         </h3>
         <p>
           A small comfort object — a blanket that smells like home, a family photo — gives little
           hands something familiar to hold during the adjustment weeks.
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">
           Expect the regression, don’t fear it
         </h3>
         <p>
           Clingier evenings and lighter sleep in the first two weeks are normal adjustment, not a
           sign something is wrong. Keep bedtime calm and consistent; it passes.
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">Be kind to yourself</h3>
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">Be kind to yourself</h3>
         <p>
           Crying in the car after drop-off is a rite of passage. It means you love your kid — not
           that you made the wrong choice. Working, studying, or simply getting a break makes you a
@@ -150,14 +150,14 @@ const posts: Post[] = [
           <em>“Will two languages confuse my baby?”</em> Short answer: no. Here’s what we’ve learned
           from research and from our own rooms.
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">
           Mixing languages is normal — not confusion
         </h3>
         <p>
           A toddler saying “дай me the mishka” isn’t lost; they’re drawing on two toolboxes at once.
           Code-mixing fades naturally as vocabulary grows in both languages.
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">
           Each language needs real life, not lessons
         </h3>
         <p>
@@ -165,7 +165,7 @@ const posts: Post[] = [
           don’t “teach” a language as a subject; children simply live parts of their day in it:
           storytime, songs, mealtime chatter.
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">
           Protect the home language — English will take care of itself
         </h3>
         <p>
@@ -173,7 +173,7 @@ const posts: Post[] = [
           family one. Grandparent phone calls, home-language books at bedtime, and a daycare that
           speaks it daily are what keep a child truly bilingual.
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">
           Expect a quiet phase — it’s healthy
         </h3>
         <p>
@@ -197,7 +197,7 @@ const posts: Post[] = [
           our routines so children can learn, grow, and thrive with confidence — and parents can
           exhale.
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">The space itself</h3>
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">The space itself</h3>
         <ul className="list-disc pl-6 mb-4 space-y-1.5">
           <li>
             <strong>Secure entry:</strong> monitored entrance with restricted electronic access —
@@ -217,7 +217,7 @@ const posts: Post[] = [
             inspected regularly, with outdoor time adjusted to the weather.
           </li>
         </ul>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">Health and hygiene</h3>
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">Health and hygiene</h3>
         <ul className="list-disc pl-6 mb-4 space-y-1.5">
           <li>
             <strong>Daily cleaning:</strong> the whole space is cleaned and sanitized every day.
@@ -231,7 +231,7 @@ const posts: Post[] = [
             unwell during the day.
           </li>
         </ul>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">The people</h3>
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">The people</h3>
         <ul className="list-disc pl-6 mb-4 space-y-1.5">
           <li>
             <strong>Trained caregivers:</strong> first aid, CPR, and emergency-response trained;
@@ -245,7 +245,7 @@ const posts: Post[] = [
             practiced calmly so they feel like a game to the kids.
           </li>
         </ul>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">
           Partnering with parents
         </h3>
         <p>
@@ -268,7 +268,7 @@ const posts: Post[] = [
           school. We believe these early years are more than the start of an academic journey —
           they’re the foundation of a lifelong love for learning, exploration, and friendship.
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">
           Why the early years matter
         </h3>
         <ul className="list-disc pl-6 mb-4 space-y-1.5">
@@ -289,7 +289,7 @@ const posts: Post[] = [
             motor skills.
           </li>
         </ul>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">
           How our days are built
         </h3>
         <p>
@@ -297,7 +297,7 @@ const posts: Post[] = [
           storytime; and small group projects that teach teamwork. Structure where it helps, play
           everywhere else.
         </p>
-        <h3 className="mt-6 mb-2 text-sky-deep font-display font-extrabold">
+        <h3 className="mt-6 mb-2 text-sky-ocean font-display font-extrabold">
           Getting your child ready — a young mom’s checklist
         </h3>
         <ul className="list-disc pl-6 mb-4 space-y-1.5">
@@ -316,7 +316,7 @@ const posts: Post[] = [
           <li>
             <strong>Visit first:</strong> a familiar room and familiar faces shrink first-day
             jitters. (That’s exactly what our{" "}
-            <AnchorLink to="visit" className="text-sky-deep">
+            <AnchorLink to="visit" className="text-sky-ocean">
               free tour
             </AnchorLink>{" "}
             is for.)
@@ -348,7 +348,7 @@ export default function Newsletter() {
         <div className="w-[min(1240px,94.5%)] mx-auto">
           <div className="rounded-brand text-white p-11 grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-9 items-center shadow-brand bg-[linear-gradient(135deg,#1a86b4,#156f96)]">
             <div>
-              <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sun-mist text-sun-deep">
+              <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sun-mist text-sun-text">
                 The Lala Letter
               </span>
               <h1 className="text-white font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)] mb-2.5">
@@ -399,7 +399,7 @@ export default function Newsletter() {
       <section id="blog" className="py-19 bg-cloud">
         <div className="w-[min(860px,94.5%)] mx-auto">
           <div className="text-center max-w-175 mx-auto mb-11.5">
-            <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-deep">
+            <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean">
               The Blog
             </span>
             <h2 className="font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3">
@@ -416,7 +416,7 @@ export default function Newsletter() {
               <a
                 key={t.id}
                 href={`#${t.id}`}
-                className="no-underline bg-white shadow-brand-soft rounded-full px-4.5 py-2.5 font-bold text-[0.9rem] text-ink hover:bg-sky-mist hover:text-sky-deep"
+                className="no-underline bg-white shadow-brand-soft rounded-full px-4.5 py-2.5 font-bold text-[0.9rem] text-ink hover:bg-sky-mist hover:text-sky-ocean"
               >
                 {t.label}
               </a>
@@ -446,12 +446,12 @@ export default function Newsletter() {
         </div>
       </section>
 
-      <section className="bg-[linear-gradient(120deg,#1e9ed4,#156f96)] text-center text-white py-16">
+      <section className="bg-sky-ocean text-center text-white py-16">
         <div className="w-[min(1240px,94.5%)] mx-auto">
           <h2 className="text-white mb-2.5 font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)]">
             Want these tips in your inbox?
           </h2>
-          <p className="text-white/90 max-w-140 mx-auto mb-6.5">
+          <p className="text-white max-w-140 mx-auto mb-6.5">
             Subscribe to The Lala Letter above — or better yet, come ask us in person.
           </p>
           <AnchorLink

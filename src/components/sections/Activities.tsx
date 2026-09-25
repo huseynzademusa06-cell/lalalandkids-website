@@ -11,7 +11,7 @@ export default function Activities() {
       descEn: "Exploring toys and games to spark curiosity.",
       descRu: "Игрушки и игры, которые разжигают любознательность.",
       border: "border-sky",
-      iconColor: "text-sky-deep",
+      iconColor: "text-sky-ocean",
     },
     {
       icon: "i-book",
@@ -20,7 +20,7 @@ export default function Activities() {
       descEn: "Learning emotions and empathy through stories.",
       descRu: "Эмоции и сочувствие через истории.",
       border: "border-sky",
-      iconColor: "text-sky-deep",
+      iconColor: "text-sky-ocean",
     },
     {
       icon: "i-bulb",
@@ -29,7 +29,7 @@ export default function Activities() {
       descEn: "Building motor skills and brain development.",
       descRu: "Развитие моторики и умственных способностей.",
       border: "border-sky",
-      iconColor: "text-sky-deep",
+      iconColor: "text-sky-ocean",
     },
     {
       icon: "i-smile",
@@ -38,7 +38,7 @@ export default function Activities() {
       descEn: "Role-play that boosts communication and social skills.",
       descRu: "Ролевые игры для общения и социальных навыков.",
       border: "border-sun",
-      iconColor: "text-sun-deep",
+      iconColor: "text-sun-text",
     },
     {
       icon: "i-tree",
@@ -47,7 +47,7 @@ export default function Activities() {
       descEn: "Playing outside to build physical skills.",
       descRu: "Игры на улице для физического развития.",
       border: "border-sky",
-      iconColor: "text-sky-deep",
+      iconColor: "text-sky-ocean",
     },
     {
       icon: "i-apple",
@@ -56,7 +56,7 @@ export default function Activities() {
       descEn: "Healthy snacks and quiet time to recharge.",
       descRu: "Полезные перекусы и тихое время.",
       border: "border-sky",
-      iconColor: "text-sky-deep",
+      iconColor: "text-sky-ocean",
     },
     {
       icon: "i-music",
@@ -65,7 +65,7 @@ export default function Activities() {
       descEn: "Dancing and singing that help speech and motor skills.",
       descRu: "Танцы и песни для речи и координации.",
       border: "border-sky",
-      iconColor: "text-sky-deep",
+      iconColor: "text-sky-ocean",
     },
     {
       icon: "i-brush",
@@ -74,7 +74,7 @@ export default function Activities() {
       descEn: "Simple art projects that grow creativity.",
       descRu: "Простые арт-проекты для развития креативности.",
       border: "border-sun",
-      iconColor: "text-sun-deep",
+      iconColor: "text-sun-text",
     },
   ];
 
@@ -82,7 +82,7 @@ export default function Activities() {
     <section id="activities" className="py-19">
       <div className="w-[min(1240px,94.5%)] mx-auto">
         <div className="text-center max-w-175 mx-auto mb-11.5">
-          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-mint-mist text-mint-deep">
+          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean">
             <span className={lang === "ru" ? "hidden" : "inline"}>Fun Activities</span>
             <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
               Занятия

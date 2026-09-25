@@ -11,7 +11,7 @@ export default function Nutrition() {
       descEn: "Three full meals and two snacks, every day.",
       descRu: "Три основных приёма пищи и два перекуса — каждый день.",
       border: "border-sky",
-      iconColor: "text-sky-deep",
+      iconColor: "text-sky-ocean",
     },
     {
       icon: "i-leaf",
@@ -20,7 +20,7 @@ export default function Nutrition() {
       descEn: "Reduced salt and sugar content across the menu.",
       descRu: "Сниженное содержание соли и сахара во всём меню.",
       border: "border-sun",
-      iconColor: "text-sun-deep",
+      iconColor: "text-sun-text",
     },
     {
       icon: "i-bowl",
@@ -29,7 +29,7 @@ export default function Nutrition() {
       descEn: "Fresh vegetables, fruits, whole grains, proteins, yogurt, milk, and eggs.",
       descRu: "Свежие овощи, фрукты, цельнозерновые продукты, белки, йогурт, молоко и яйца.",
       border: "border-sky",
-      iconColor: "text-sky-deep",
+      iconColor: "text-sky-ocean",
     },
   ];
 
@@ -37,7 +37,7 @@ export default function Nutrition() {
     <section id="nutrition" className="py-19 bg-cloud">
       <div className="w-[min(1240px,94.5%)] mx-auto">
         <div className="text-center max-w-175 mx-auto mb-11.5">
-          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-deep">
+          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean">
             <span className={lang === "ru" ? "hidden" : "inline"}>Nutrition</span>
             <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
               Питание

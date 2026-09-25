@@ -46,7 +46,7 @@ export default function Skills() {
     <section id="skills" className="py-19 bg-cloud">
       <div className="w-[min(1240px,94.5%)] mx-auto">
         <div className="text-center max-w-175 mx-auto mb-11.5">
-          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sun-mist text-sun-deep">
+          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sun-mist text-sun-text">
             <span className={lang === "ru" ? "hidden" : "inline"}>Building Strong Foundations</span>
             <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
               Прочные основы

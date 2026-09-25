@@ -28,12 +28,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white mb-3 text-base">
+            <h2 className="text-white mb-3 text-base">
               <span className={lang === "ru" ? "hidden" : "inline"}>Explore</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                 Разделы
               </span>
-            </h4>
+            </h2>
             <ul className="list-none">
               <li className="mb-2 text-[0.92rem]">
                 <Link to="/" className="text-[#c6cede] no-underline hover:text-sun">
@@ -71,12 +71,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white mb-3 text-base">
+            <h2 className="text-white mb-3 text-base">
               <span className={lang === "ru" ? "hidden" : "inline"}>Contact</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
                 Контакты
               </span>
-            </h4>
+            </h2>
             <ul className="list-none">
               <li className="mb-2 text-[0.92rem]">
                 <a href="tel:+14153505015" className="text-[#c6cede] no-underline hover:text-sun">
@@ -108,7 +108,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="border-t border-white/14 pt-5.5 text-[0.83rem] text-center text-[#9aa6bd]">
+        <p className="border-t border-white/14 pt-5.5 text-[0.83rem] text-center text-[#b6c0d6]">
           <span className={lang === "ru" ? "hidden" : "inline"}>
             Licensed family child care home · Provider: Gulsum Ahmadova · CDSS Community Care
             Licensing #414005148

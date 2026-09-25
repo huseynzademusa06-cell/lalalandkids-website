@@ -9,7 +9,7 @@ export default function About() {
     <section id="about" className="py-19">
       <div className="w-[min(1240px,94.5%)] mx-auto grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr] gap-12.5 items-center">
         <div>
-          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.25 rounded-full mb-3.5 bg-sky-mist text-sky-deep">
+          <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.25 rounded-full mb-3.5 bg-sky-mist text-sky-ocean">
             <span className={lang === "ru" ? "hidden" : "inline"}>About Us</span>
             <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
               О нас
@@ -55,7 +55,7 @@ export default function About() {
 
           <div className="flex gap-3 mt-4.5 flex-wrap">
             <div className="bg-white rounded-brand-sm px-4.5 py-3 shadow-brand-soft text-[0.9rem]">
-              <strong className="font-display text-sky-deep block">Gulsum</strong>
+              <strong className="font-display text-sky-ocean block">Gulsum</strong>
               <span className={lang === "ru" ? "hidden" : "inline"}>
                 Founder · Licensed provider · Mother of three
               </span>
@@ -64,7 +64,7 @@ export default function About() {
               </span>
             </div>
             <div className="bg-white rounded-brand-sm px-4.5 py-3 shadow-brand-soft text-[0.9rem]">
-              <strong className="font-display text-sky-deep block">Lala</strong>
+              <strong className="font-display text-sky-ocean block">Lala</strong>
               <span className={lang === "ru" ? "hidden" : "inline"}>
                 Early learning &amp; activities · Mother of one
               </span>

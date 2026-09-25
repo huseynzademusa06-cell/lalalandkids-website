@@ -21,7 +21,7 @@ export default function Header() {
 
   const linkClass = (active: boolean) =>
     `no-underline font-display font-bold text-[0.95rem] px-3 py-2 rounded-full transition-colors duration-200 whitespace-nowrap ${
-      active ? "bg-sun-mist text-sun-deep" : "text-ink hover:bg-sky-mist hover:text-sky-deep"
+      active ? "bg-sun-mist text-sun-text" : "text-ink hover:bg-sky-mist hover:text-sky-ocean"
     }`;
 
   return (
@@ -38,7 +38,7 @@ export default function Header() {
             loading="eager"
             fetchPriority="high"
           />
-          <span className="font-display font-extrabold text-[1.3rem] text-sky-deep leading-tight whitespace-nowrap">
+          <span className="font-display font-extrabold text-[1.3rem] text-sky-ocean leading-tight whitespace-nowrap">
             Lala Land
             <small
               className={`block text-[0.68rem] tracking-[0.14em] uppercase text-pink-deep ${lang === "ru" ? "hidden" : "block"}`}
@@ -159,7 +159,7 @@ export default function Header() {
         </ul>
 
         <button
-          className="ml-2.5 max-[920px]:ml-0 border-2 border-sky bg-white rounded-full px-3 py-1 cursor-pointer font-bold text-[0.85rem] text-sky-deep transition-colors duration-150 hover:bg-sky-mist"
+          className="ml-2.5 max-[920px]:ml-0 border-2 border-sky bg-white rounded-full px-3 py-1 cursor-pointer font-bold text-[0.85rem] text-sky-ocean transition-colors duration-150 hover:bg-sky-mist"
           aria-label="Switch language"
           onClick={toggle}
         >
