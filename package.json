@@ -7,7 +7,8 @@
     "dev": "vite-react-ssg dev",
     "build": "vite-react-ssg build && node src/scripts/fix-charset.mjs",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "node src/scripts/fix-peer-deps.mjs"
   },
   "dependencies": {
     "@fontsource/nunito": "^5.3.0",
