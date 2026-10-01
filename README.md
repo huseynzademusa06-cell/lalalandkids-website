@@ -1,97 +1,98 @@
-# Lala Land Child Care and Preschool — website
+# Lala Land Kids - Website
 
-**Live site:** https://lalalandkids.care
-**Hosting:** GitHub Pages (this repo, `main` branch, root folder) · HTTPS enforced
-**Stack:** plain static HTML + one CSS file + one JS file. No framework, no build step, no dependencies, no package manager.
+Marketing site for Lala Land Child Care & Preschool, a licensed family daycare
+and preschool in Foster City, California. Bilingual (English/Russian),
+statically prerendered per route for performance and SEO.
 
-> **New here? Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before your first change.** This is a licensed
-> childcare business — a few content rules are legal/trust matters, not preferences.
+🔗 **Live site:** https://lalalandkids.care
 
----
+## Stack
 
-## Quick start
+- **React 19 + TypeScript**
+- **Tailwind CSS v4**
+- **Vite 8** - build tooling
+- **[vite-react-ssg](https://github.com/userquin/vite-react-ssg)** - static
+  prerendering per route (built on React Router v6)
+- **[vite-imagetools](https://github.com/JonasKruckenberg/imagetools)** -
+  generates resized, WebP image variants at build time (see
+  `src/vite-env.d.ts` for the custom import types this needs)
+- **oxlint** - linting (see `.oxlintrc.json`)
+
+## Getting started
 
 ```bash
-git clone https://github.com/huseynzademusa06-cell/lalalandkids-website.git
-cd lalalandkids-website
-python3 -m http.server 8000
+npm install
+npm run dev       # dev server with HMR
 ```
 
-Open http://localhost:8000. That's the whole dev environment. (Opening `index.html` directly with
-`file://` also mostly works, but the server matches production behaviour for paths and the 404 page.)
+## Building
 
-The only external requests the site makes are Google Fonts and the embedded Google map.
+```bash
+npm run build      # prerenders all routes into dist/
+npm run preview    # serve the production build locally
+```
 
----
+> **Always test Lighthouse against `npm run preview`, not `npm run dev`.**
+> Dev mode serves unminified, unbundled assets (e.g. `/src/index.css`
+> directly) and produces misleading performance scores.
 
-## What's in here
+## Project structure
 
-| Path | What it is |
-|---|---|
-| `index.html` | The main one-page site — hero, about, videos, activities, skills, daily schedule, nutrition, for-parents, FAQ, tour booking, contact + map. ~500 lines. |
-| `testimonials.html` | Parent testimonials — video slots + written quotes. Currently says quotes are being collected (see rules). |
-| `gallery.html` | Photo gallery — rooms/facility and everyday moments, plus video-tour slots. |
-| `newsletter.html` | "The Lala Letter" signup + blog (5 posts). |
-| `404.html` | Custom 404, served by Pages. |
-| `css/styles.css` | The entire design system, ~525 lines. Every page shares it. |
-| `js/main.js` | Mobile nav, EN/RU toggle (persisted to `localStorage`), small UI behaviour. ~47 lines. |
-| `assets/` | Logo and images. Gallery photos go in `assets/gallery/space/` and `assets/gallery/moments/`. |
-| `tools/update_gallery.py` | Regenerates the gallery grids from the photo folders. See below. |
-| `FACTS.md` | **Content source of truth.** Every factual claim on the site must trace back to this file. |
-| `CNAME`, `robots.txt`, `sitemap.xml` | Domain + SEO plumbing. Read the warnings in `CONTRIBUTING.md` before touching. |
-| `_config.yml` | Keeps internal docs (this file, `FACTS.md`, `tools/`) out of the *published* site. |
+```
+src/
+  components/
+    layout/     # Header, Footer, IconSprite, Layout, AnchorLink, ScrollToTop
+    sections/   # Homepage sections (Hero, About, Programs, FAQ, etc.)
+    SEO.tsx     # Per-page <head> tags, via vite-react-ssg's <Head>
+  context/
+    languageContext.tsx   # EN/RU toggle, persisted to localStorage
+  pages/        # Route-level pages: Home, Gallery, Testimonials, Newsletter
+  routes.tsx    # Route definitions, consumed by vite-react-ssg
+  vite-env.d.ts # Vite's base types + custom module types for imagetools imports
+```
 
----
+## Images
 
-## How deploying works
+Logo/photo imports use `vite-imagetools` query suffixes to generate
+resized WebP variants at build time, e.g.:
 
-**Push to `main` → live on lalalandkids.care in about a minute.** There is no staging environment.
-GitHub Pages builds the repo root and serves it on the custom domain. That is why the
-branch-and-pull-request workflow in `CONTRIBUTING.md` matters: the PR *is* the safety net.
+```tsx
+import logoSrcSet from "../../assets/logo.jpg?w=280;560&format=webp&as=srcset";
+import logoFallback from "../../assets/logo.jpg?w=280&format=webp";
 
-- The `CNAME` file (contents: `lalalandkids.care`) is what binds the domain. **Deleting it takes the
-  site off the domain.**
-- DNS lives in a Squarespace account the owner controls (A records → GitHub Pages IPs, `www` CNAME,
-  plus **MX/SPF/DKIM/DMARC records that run the business email**). Nobody but the owner touches DNS.
-- The TLS certificate is issued and auto-renewed by GitHub. Nothing to do.
+<img src={logoFallback} srcSet={logoSrcSet} width="280" height="249" ... />
+```
 
-Check a deploy: the commit gets a green check, and `curl -I https://lalalandkids.care` returns
-`HTTP/2 200`.
+`srcSet` lets the browser pick the right resolution for the visitor's
+screen; `src` is the required plain fallback. Match the requested widths
+to the image's actual displayed size (check Tailwind width classes) -
+don't default to the original asset dimensions.
 
----
+## Deployment
 
-## Adding gallery photos
+Deployed via GitHub Pages to a custom domain.
 
-1. Drop images into `assets/gallery/space/` (rooms, facility) or `assets/gallery/moments/` (everyday life).
-2. Name the file after its caption — dashes become spaces: `infant-room.jpg` → "Infant room".
-3. Run `python3 tools/update_gallery.py` (add `--optimize` to downscale large photos in place, macOS only).
-   It rewrites `gallery.html` between the `GALLERY:SPACE` / `GALLERY:MOMENTS` markers.
-4. Commit the photos *and* the regenerated `gallery.html`.
+- `public/CNAME` must be present for the custom domain to survive a
+  deploy - Vite only copies `public/`'s contents into `dist/`, so this
+  file cannot live at the project root.
+- `public/robots.txt`, `public/sitemap.xml`, `public/favicon.svg` are
+  static passthrough assets, copied into `dist/` unmodified.
 
-**Only use photos of children whose parents have signed the Photo & Video Release form.** If you
-did not personally receive that confirmation from the owner for a specific photo, do not publish it.
+<!-- TODO: document the actual deploy command / GitHub Actions workflow -->
 
----
+## Known accepted risks
 
-## Known work queue
+- `npm audit` flags moderate-severity CVEs in `react-router` (fixed only
+  in v7.18+). `vite-react-ssg` pins `react-router-dom` to `^6.x` and has
+  no v7 support, so this can't be resolved without migrating off
+  `vite-react-ssg` to React Router v7's native SSG. Not currently
+  exploitable in this app (no dynamic redirects, no custom SSR error
+  handling). Revisit if/when migrating away from `vite-react-ssg`.
 
-These are the open items the site is waiting on — most are content, not code:
+## Linting
 
-- Real photos into the gallery and the about-photo slot (placeholders ship today, by decision).
-- Nine 9:16 video slots across the pages — embed snippets are in HTML comments next to each slot.
-- Real parent testimonials (see the rule about invented quotes in `CONTRIBUTING.md`).
-- Tour-request and newsletter forms currently open a pre-filled email. Connecting a real form or
-  scheduler service is an open decision — ask before wiring one up, since it touches parent data.
-- Google Business Profile + review link (placeholder `#` on `testimonials.html`).
-- `sitemap.xml` is now maintained by hand — update `lastmod` when you add or meaningfully change a page.
+```bash
+npm run lint    # oxlint
+```
 
----
-
-## Who owns what
-
-| Thing | Who |
-|---|---|
-| This repo, code, content of the site | Owner + developer |
-| Repo settings, Pages settings, collaborators | Owner (repo admin) |
-| DNS, domain registration, business email | **Owner only** — never changed by request from anyone else |
-| Facts, names, licensing claims, photos of children | **Owner only** — see `FACTS.md` |
+See `.oxlintrc.json` for rule configuration.

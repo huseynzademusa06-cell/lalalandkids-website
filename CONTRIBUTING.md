@@ -14,8 +14,11 @@ it is on lalalandkids.care about a minute later, in front of parents deciding wh
 their child. There is no staging environment and no review gate. That trust is deliberate;
 the discipline below is what it assumes.
 
-**Always, before pushing:** run it locally (`python3 -m http.server 8000`), look at the page you
-changed at desktop *and* mobile width, and check the console is clean.
+**Always, before pushing:** run it locally (`npm run dev`), look at the page you
+changed at desktop *and* mobile width, and check the console is clean. If you changed anything
+that affects how the site builds or renders (images, routing, `<head>` tags), also run
+`npm run build && npm run preview` once — the dev server and the real production build can
+behave differently, and `preview` is what actually reflects what ships.
 
 **Push straight to `main`** for small, self-evident, low-blast-radius changes — a typo, a broken
 link, a CSS nudge on one component.
@@ -24,7 +27,8 @@ link, a CSS nudge on one component.
 
 - new or reworded parent-facing copy, or anything touching facts, names, or claims
 - anything involving photos of children, testimonials, or the license line
-- a change to the shared design system in `css/styles.css` that affects more than one component
+- a change to the shared design tokens in `src/index.css` (the `@theme` block) that affects more
+  than one component
 - a new page, a form, an embed, or any third-party script
 - anything you are not fully sure about
 
@@ -38,7 +42,7 @@ gh pr create            # or open the PR on github.com
 
 Other rules of the road:
 
-- One topic per commit or PR. A CSS refactor and a copy change are separate.
+- One topic per commit or PR. A refactor and a copy change are separate.
 - Write commit messages that say *why*, not just what. This repo's history is the only changelog.
 - Never force-push `main`, never rewrite published history.
 - If you break the live site, fix forward or `git revert` immediately, then tell the owner. Don't
@@ -52,7 +56,7 @@ Other rules of the road:
 | **Never publish an email address.** Contact is phone/text **(415) 350-5015** and Instagram DM only. | Owner decision. Restore only on explicit instruction. |
 | **Never invent a testimonial, quote, parent name, review, rating, or staff-to-child ratio.** | Fabricated quotes on a childcare site are a licensing and reputation problem. "Small groups, low ratios" is approved language; a *number* is not, unless the owner supplies it. |
 | **Licensed provider name + license #414005148 appear in the footer of every page.** | Required trust signal; removing it from a page is a regression. |
-| **No emojis in site copy.** | Use the inline SVG icon sprite at the top of each page (`.ic` / `.icon`). Typographic glyphs (★ ☰ ✕) are UI characters and are fine. |
+| **No emojis in site copy.** | Use the icon sprite (`IconSprite.tsx` / `<Icon id="..." />`). Typographic glyphs (★ ☰ ✕) are UI characters and are fine. |
 | **Every fact traces to [`FACTS.md`](FACTS.md).** Anything not in that file is a placeholder and must be visibly marked as one. | It is the single source of truth. Update `FACTS.md` first, then the pages. |
 | **Only publish photos of children covered by a signed Photo & Video Release.** | Legal. If you did not get that confirmation from the owner for that specific photo, it does not ship. |
 
@@ -74,12 +78,14 @@ access to it.** If you are ever sent such a file, don't commit it — tell the o
 
 ## Design system
 
-`css/styles.css` holds the whole system. Some of it looks wrong and is not:
+`src/index.css` holds the design tokens (the `@theme` block) — colors, fonts, radii, shadows.
+Components are styled directly with Tailwind utility classes referencing those tokens; there is
+no separate component-level stylesheet. Some of it looks wrong and is not:
 
 - **The palette is deliberately collapsed.** The brand is one hue — sky blue `#45beea` — plus amber
-  for action buttons **only**, plus neutrals. The legacy `--mint`, `--pink`, `--grape` variables are
-  intentionally remapped to sky so old components fold into the current palette. **Do not "fix" them
-  back to their original colors.** Mint/pink/grape exist only inside the logo artwork and photos.
+  for action buttons **only**, plus neutrals. Legacy hue names (mint/pink/grape from the pre-React
+  version) are intentionally remapped to sky. **Do not "fix" them back to their original colors.**
+  Mint/pink/grape exist only inside the logo artwork and photos.
 - **Amber is for calls to action only.** It is not a decorative color.
 - **Headings are Nunito 800.** No rounded display font.
 - The dragon logo artwork is untouchable — no recolor, no redraw.
@@ -91,13 +97,14 @@ access to it.** If you are ever sent such a file, don't commit it — tell the o
 ## Testing before you open a PR
 
 - Desktop and mobile widths — check ≤680px specifically.
-- The **EN/RU toggle** in the header: every section on `index.html` has Russian content that must
-  switch. Pages without Russian simply have no `.ru` spans. The choice persists via `localStorage`.
+- The **EN/RU toggle** (`useLanguage()` context): each bilingual spot in a component renders both
+  an English and a Russian `<span>`, and toggles which one is visible via a `hidden`/`inline`
+  class based on the current language — both are always in the DOM. Check that every section
+  actually has a Russian pair; a spot with only an English span won't switch. The choice persists
+  via `localStorage`.
 - Mobile nav opens and closes.
 - No console errors.
 - Every internal link and anchor still resolves; the phone link still dials.
-- Bump the `?v=` query on `css/styles.css` links if you changed CSS, so returning visitors don't get
-  a stale cached stylesheet.
 
 ---
 
@@ -105,9 +112,8 @@ access to it.** If you are ever sent such a file, don't commit it — tell the o
 
 | File / system | Why |
 |---|---|
-| `CNAME` | Binds the domain. Deleting or editing it takes the site off lalalandkids.care. |
-| `robots.txt`, `sitemap.xml` | Live SEO. Fine to update deliberately; not fine to drop. |
-| `_config.yml` | Keeps `README.md`, `CONTRIBUTING.md`, `FACTS.md` and `tools/` out of the published site. |
+| `public/CNAME` | Binds the domain. Deleting or editing it takes the site off lalalandkids.care. |
+| `public/robots.txt`, `public/sitemap.xml` | Live SEO. Fine to update deliberately; not fine to drop. Note: these live in `public/`, not the project root — only `public/`'s contents get copied into the deployed build. |
 | **DNS / domain registrar** | Also carries the **MX, SPF, DKIM and DMARC records that run the business email**. A wrong edit silently kills mail. Owner-only, always. |
 | Google Workspace / business email | Owner-only. |
 | Repository settings, Pages settings, visibility | Owner-only (repo admin). |
@@ -117,4 +123,5 @@ access to it.** If you are ever sent such a file, don't commit it — tell the o
 ## Getting help
 
 Anything about facts, names, photos, pricing, licensing, or parent-facing wording → ask the owner,
-don't guess. Anything about code structure → the whole site is 1,100 lines; read it.
+don't guess. Anything about code structure → read through `src/components/` and `src/pages/` —
+each section/page is its own file, named for what it is.
