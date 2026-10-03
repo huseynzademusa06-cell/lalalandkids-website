@@ -1,22 +1,26 @@
 import { useLanguage } from "../../context/languageContext";
+import ReelCard from "../ui/ReelCard";
 
 export default function VideoReels() {
   const { lang } = useLanguage();
 
   const reels = [
     {
+      color: "bg-[linear-gradient(160deg,#f472b6,#c2185b)]",
       titleEn: "Meet the Family",
       titleRu: "Наша семья",
       descEn: "Why we started Lala Land",
       descRu: "Почему мы создали Lala Land",
     },
     {
+      color: "bg-[linear-gradient(160deg,#2ba5db,#156f96)]",
       titleEn: "A Day at Lala Land",
       titleRu: "Один день в Lala Land",
       descEn: "Follow a whole day, morning to pickup",
       descRu: "Целый день — с утра до вечера",
     },
     {
+      color: "bg-[linear-gradient(160deg,#34d399,#0f9d78)]",
       titleEn: "The Free Tour",
       titleRu: "Бесплатный визит",
       descEn: "Come see a normal day — kids leave with a dragon",
@@ -53,33 +57,7 @@ export default function VideoReels() {
         {/* PLACEHOLDER VIDEO SLOTS */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6.5 max-w-225 mx-auto">
           {reels.map((reel, i) => (
-            <div
-              key={i}
-              className="relative aspect-9/16 rounded-brand overflow-hidden shadow-brand flex flex-col items-center justify-center text-center p-6 text-white bg-[linear-gradient(160deg,#2ba5db,#156f96)]"
-            >
-              <div className="absolute inset-0 bg-black/40"></div>
-              <span className="absolute top-3.5 left-3.5 bg-black/35 text-[0.7rem] font-extrabold tracking-[0.08em] uppercase px-2.5 py-1 rounded-full">
-                <span className={lang === "ru" ? "hidden" : "inline"}>Video coming soon</span>
-                <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
-                  Видео скоро
-                </span>
-              </span>
-              <span className="w-16 h-16 rounded-full bg-white/92 flex items-center justify-center text-[1.5rem] text-ink mb-4 shadow-brand transition-transform duration-200 hover:scale-110">
-                ▶
-              </span>
-              <h3 className="relative text-white text-[1.1rem]">
-                <span className={lang === "ru" ? "hidden" : "inline"}>{reel.titleEn}</span>
-                <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
-                  {reel.titleRu}
-                </span>
-              </h3>
-              <p className="relative text-[0.85rem] mt-1.5">
-                <span className={lang === "ru" ? "hidden" : "inline"}>{reel.descEn}</span>
-                <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
-                  {reel.descRu}
-                </span>
-              </p>
-            </div>
+            <ReelCard key={i} reel={reel} />
           ))}
         </div>
       </div>
