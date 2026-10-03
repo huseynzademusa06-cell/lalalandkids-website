@@ -95,21 +95,21 @@ const momentTiles = [
 
 const reels = [
   {
-    color: "bg-[linear-gradient(160deg,#34d399,#0f9d78)]",
+    color: "bg-[image:var(--gradient-pink)]",
     titleEn: "Infant Room Tour",
     titleRu: "Тур по комнате малышей",
     descEn: "Where the tiniest ones spend their day",
     descRu: "Где самые маленькие проводят свой день",
   },
   {
-    color: "bg-[linear-gradient(160deg,#2ba5db,#156f96)]",
+    color: "bg-[image:var(--gradient-sky)]",
     titleEn: "Full Walkthrough",
     titleRu: "Полный обзор",
     descEn: "Every room, front door to backyard",
     descRu: "Каждая комната — от входной двери до заднего двора",
   },
   {
-    color: "bg-[linear-gradient(160deg,#f472b6,#c2185b)]",
+    color: "bg-[image:var(--gradient-mint)]",
     titleEn: "Outdoor Play",
     titleRu: "Прогулки на улице",
     descEn: "Fresh air, every single day",

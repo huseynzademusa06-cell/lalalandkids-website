@@ -5,21 +5,21 @@ import { useLanguage } from "../context/languageContext";
 
 const reels = [
   {
-    color: "bg-[linear-gradient(160deg,#f472b6,#c2185b)]",
+    color: "bg-[image:var(--gradient-pink)]",
     titleEn: "Parent Voices",
     titleRu: "Голоса родителей",
     descEn: "Why families chose Lala Land",
     descRu: "Почему семьи выбрали Lala Land",
   },
   {
-    color: "bg-[linear-gradient(160deg,#2ba5db,#156f96)]",
+    color: "bg-[image:var(--gradient-sky)]",
     titleEn: "A First Week Story",
     titleRu: "История первой недели",
     descEn: "From nervous drop-off to happy pickup",
     descRu: "От волнения при расставании до радости при встрече",
   },
   {
-    color: "bg-[linear-gradient(160deg,#34d399,#0f9d78)]",
+    color: "bg-[image:var(--gradient-mint)]",
     titleEn: "Many Languages at Home",
     titleRu: "Много языков дома",
     descEn: "A family on multilingual daycare life",
