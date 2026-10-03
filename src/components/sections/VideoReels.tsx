@@ -6,21 +6,21 @@ export default function VideoReels() {
 
   const reels = [
     {
-      color: "bg-[image:var(--gradient-pink)]",
+      color: "bg-(image:--gradient-pink)",
       titleEn: "Meet the Family",
       titleRu: "Наша семья",
       descEn: "Why we started Lala Land",
       descRu: "Почему мы создали Lala Land",
     },
     {
-      color: "bg-[image:var(--gradient-sky)]",
+      color: "bg-(image:--gradient-sky)",
       titleEn: "A Day at Lala Land",
       titleRu: "Один день в Lala Land",
       descEn: "Follow a whole day, morning to pickup",
       descRu: "Целый день — с утра до вечера",
     },
     {
-      color: "bg-[image:var(--gradient-mint)]",
+      color: "bg-(image:--gradient-mint)",
       titleEn: "The Free Tour",
       titleRu: "Бесплатный визит",
       descEn: "Come see a normal day — kids leave with a dragon",
