@@ -3,7 +3,11 @@ import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 import { imagetools } from "vite-imagetools";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [tailwindcss(), react(), imagetools()],
+  build: {
+    modulePreload: {
+      polyfill: true,
+    },
+  },
 });
