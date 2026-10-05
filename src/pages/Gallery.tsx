@@ -1,5 +1,6 @@
 import AnchorLink from "../components/layout/AnchorLink";
 import SEO from "../components/SEO";
+import ReelCard from "../components/ui/ReelCard";
 import { useLanguage } from "../context/languageContext";
 
 const spaceTiles = [
@@ -92,23 +93,23 @@ const momentTiles = [
   },
 ];
 
-const tourReels = [
+const reels = [
   {
-    color: "bg-[linear-gradient(160deg,#34d399,#0f9d78)]",
+    color: "bg-(image:--gradient-pink)",
     titleEn: "Infant Room Tour",
     titleRu: "Тур по комнате малышей",
     descEn: "Where the tiniest ones spend their day",
     descRu: "Где самые маленькие проводят свой день",
   },
   {
-    color: "bg-[linear-gradient(160deg,#2ba5db,#156f96)]",
+    color: "bg-(image:--gradient-sky)",
     titleEn: "Full Walkthrough",
     titleRu: "Полный обзор",
     descEn: "Every room, front door to backyard",
     descRu: "Каждая комната — от входной двери до заднего двора",
   },
   {
-    color: "bg-[linear-gradient(160deg,#f472b6,#c2185b)]",
+    color: "bg-(image:--gradient-mint)",
     titleEn: "Outdoor Play",
     titleRu: "Прогулки на улице",
     descEn: "Fresh air, every single day",
@@ -336,36 +337,8 @@ export default function Gallery() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6.5 max-w-225 mx-auto">
-            {tourReels.map((reel, i) => (
-              <div
-                key={i}
-                className={`relative aspect-9/16 rounded-brand overflow-hidden shadow-brand flex flex-col items-center justify-center text-center p-6 text-white ${reel.color}`}
-              >
-                <span
-                  className={`absolute top-3.5 left-3.5 bg-black/35 text-[0.7rem] font-extrabold tracking-[0.08em] uppercase px-2.5 py-1 rounded-full ${lang === "ru" ? "hidden" : "inline"}`}
-                >
-                  Video coming soon
-                </span>
-                <span
-                  className={`absolute top-3.5 left-3.5 bg-black/35 text-[0.7rem] font-extrabold tracking-[0.08em] uppercase px-2.5 py-1 rounded-full ${lang === "ru" ? "inline" : "hidden"}`}
-                  lang="ru"
-                >
-                  Видео скоро появится
-                </span>
-
-                <span className="w-16 h-16 rounded-full bg-white/92 flex items-center justify-center text-ink mb-4 shadow-brand">
-                  <svg className="w-5.5 h-5.5 stroke-current fill-none stroke-2">
-                    <use href="#i-play" />
-                  </svg>
-                </span>
-
-                <h3 className="text-white text-[1.1rem] [text-shadow:0_2px_8px_rgba(0,0,0,0.25)]">
-                  {lang === "ru" ? reel.titleRu : reel.titleEn}
-                </h3>
-                <p className="text-[0.85rem] opacity-92 mt-1.5 [text-shadow:0_1px_6px_rgba(0,0,0,0.25)]">
-                  {lang === "ru" ? reel.descRu : reel.descEn}
-                </p>
-              </div>
+            {reels.map((reel, i) => (
+              <ReelCard key={i} reel={reel} />
             ))}
           </div>
         </div>

@@ -1,8 +1,4 @@
-@import "@fontsource/nunito/400.css";
-/* @import "@fontsource/nunito/600.css"; */
-@import "@fontsource/nunito/700.css";
-@import "@fontsource/nunito/800.css";
-/* @import "@fontsource/nunito/900.css"; */
+@import "@fontsource-variable/nunito";
 @import "tailwindcss";
 
 @theme {
@@ -21,8 +17,11 @@
   --color-cloud: #f6fafd;
   --color-ink: #2e3c50;
   --color-ink-soft: #5d6b85;
-
   --color-pink-deep: #c2185b;
+
+  --gradient-pink: linear-gradient(160deg, #f472b6, #c2185b);
+  --gradient-sky: linear-gradient(160deg, #2ba5db, #156f96);
+  --gradient-mint: linear-gradient(160deg, #34d399, #0f9d78);
 
   --radius-brand: 22px;
   --radius-brand-sm: 14px;
@@ -30,6 +29,6 @@
   --shadow-brand: 0 10px 30px rgba(51, 65, 92, 0.1);
   --shadow-brand-soft: 0 4px 14px rgba(51, 65, 92, 0.07);
 
-  --font-display: "Nunito", "Avenir Next", "Segoe UI", sans-serif;
-  --font-body: "Nunito", "Avenir Next", "Segoe UI", sans-serif;
+  --font-display: "Nunito Variable", "Avenir Next", sans-serif;
+  --font-body: "Nunito Variable", "Avenir Next", sans-serif;
 }
