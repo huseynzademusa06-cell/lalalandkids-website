@@ -6,6 +6,15 @@ import { imagetools } from "vite-imagetools";
 export default defineConfig({
   plugins: [tailwindcss(), react(), imagetools()],
   build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            return "vendor";
+          }
+        },
+      },
+    },
     modulePreload: {
       polyfill: true,
     },
