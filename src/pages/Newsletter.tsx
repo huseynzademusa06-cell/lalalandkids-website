@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import AnchorLink from "../components/layout/AnchorLink";
 import SEO from "../components/SEO";
 import { useLanguage } from "../context/languageContext";
+import Reveal from "../components/Reveal";
 
 function ContactAside() {
   const { lang } = useLanguage();
@@ -665,133 +666,127 @@ export default function Newsletter() {
         description="The Lala Letter - a newsletter and blog for young moms: daycare tips, bilingual parenting, safety, and best practices from Lala Land in Foster City, CA."
         path="/newsletter"
       />
-      <section className="pt-12 pb-19">
-        <div className="w-[min(1240px,94.5%)] mx-auto">
-          <div className="rounded-brand text-white p-11 grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-9 items-center shadow-brand bg-[linear-gradient(135deg,#1a86b4,#156f96)]">
-            <div>
-              <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sun-mist text-sun-text">
-                The Lala Letter
-              </span>
-
-              <h1
-                className={`text-white font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)] mb-2.5 ${lang === "ru" ? "hidden" : "block"}`}
-              >
-                A little letter for busy young moms
-              </h1>
-              <h1
-                className={`text-white font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)] mb-2.5 ${lang === "ru" ? "block" : "hidden"}`}
-                lang="ru"
-              >
-                Небольшое письмо для занятых молодых мам
-              </h1>
-
-              <p className={`text-white/88 mb-0 ${lang === "ru" ? "hidden" : "block"}`}>
-                Once a month: what we did at Lala Land, seasonal activity ideas to try at home,
-                bilingual-parenting tips, and honest answers to the questions parents ask us most.
-                No spam — ever.
-              </p>
-              <p className={`text-white/88 mb-0 ${lang === "ru" ? "block" : "hidden"}`} lang="ru">
-                Раз в месяц: что мы делали в Lala Land, идеи сезонных занятий для дома, советы по
-                воспитанию двуязычных детей и честные ответы на самые частые вопросы родителей.
-                Никакого спама — никогда.
-              </p>
-
-              <p className="text-[0.9rem] text-white/80 mt-2" lang="ru">
-                Говорим по-русски — звоните: (415) 350-5015.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-3">
-              <p
-                className={`text-[0.95rem] text-white/90 text-center ${lang === "ru" ? "hidden" : "block"}`}
-              >
-                Newsletter signup is coming soon. Until then, follow along on Instagram — or call or
-                text us and we’ll add you to the list.
-              </p>
-              <p
-                className={`text-[0.95rem] text-white/90 text-center ${lang === "ru" ? "block" : "hidden"}`}
-                lang="ru"
-              >
-                Подписка на рассылку скоро появится. А пока подписывайтесь на наш Instagram — или
-                позвоните/напишите нам, и мы добавим вас в список.
-              </p>
-
-              <a
-                href="https://www.instagram.com/lalalandkids_fostercity"
-                target="_blank"
-                rel="noopener"
-                className="inline-flex items-center justify-center gap-2.5 font-display font-bold px-6.5 py-3 rounded-full bg-sun text-sun-ink"
-              >
-                <svg className="w-5.5 h-5.5 stroke-current fill-none stroke-2">
-                  <use href="#i-instagram" />
-                </svg>
-                {lang === "ru"
-                  ? "Подписаться на @lalalandkids_fostercity"
-                  : "Follow @lalalandkids_fostercity"}
-              </a>
-
-              <a
-                href="tel:+14153505015"
-                className="inline-flex items-center justify-center font-display font-bold px-6.5 py-3 rounded-full bg-transparent text-white border-2 border-white/65"
-              >
-                {lang === "ru"
-                  ? "Позвонить или написать (415) 350-5015"
-                  : "Call or Text (415) 350-5015"}
-              </a>
-
-              <p
-                className={`text-[0.8rem] text-white/75 text-center ${lang === "ru" ? "hidden" : "block"}`}
-              >
-                We usually write once a month. Unsubscribe anytime.
-              </p>
-              <p
-                className={`text-[0.8rem] text-white/75 text-center ${lang === "ru" ? "block" : "hidden"}`}
-                lang="ru"
-              >
-                Мы пишем обычно раз в месяц. Отписаться можно в любой момент.
-              </p>
+      <Reveal>
+        <section className="pt-12 pb-19">
+          <div className="w-[min(1240px,94.5%)] mx-auto">
+            <div className="rounded-brand text-white p-11 grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-9 items-center shadow-brand bg-[linear-gradient(135deg,#1a86b4,#156f96)]">
+              <div>
+                <span className="inline-block font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sun-mist text-sun-text">
+                  The Lala Letter
+                </span>
+                <h1
+                  className={`text-white font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)] mb-2.5 ${lang === "ru" ? "hidden" : "block"}`}
+                >
+                  A little letter for busy young moms
+                </h1>
+                <h1
+                  className={`text-white font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)] mb-2.5 ${lang === "ru" ? "block" : "hidden"}`}
+                  lang="ru"
+                >
+                  Небольшое письмо для занятых молодых мам
+                </h1>
+                <p className={`text-white/88 mb-0 ${lang === "ru" ? "hidden" : "block"}`}>
+                  Once a month: what we did at Lala Land, seasonal activity ideas to try at home,
+                  bilingual-parenting tips, and honest answers to the questions parents ask us most.
+                  No spam — ever.
+                </p>
+                <p className={`text-white/88 mb-0 ${lang === "ru" ? "block" : "hidden"}`} lang="ru">
+                  Раз в месяц: что мы делали в Lala Land, идеи сезонных занятий для дома, советы по
+                  воспитанию двуязычных детей и честные ответы на самые частые вопросы родителей.
+                  Никакого спама — никогда.
+                </p>
+                <p className="text-[0.9rem] text-white/80 mt-2" lang="ru">
+                  Говорим по-русски — звоните: (415) 350-5015.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3">
+                <p
+                  className={`text-[0.95rem] text-white/90 text-center ${lang === "ru" ? "hidden" : "block"}`}
+                >
+                  Newsletter signup is coming soon. Until then, follow along on Instagram — or call
+                  or text us and we’ll add you to the list.
+                </p>
+                <p
+                  className={`text-[0.95rem] text-white/90 text-center ${lang === "ru" ? "block" : "hidden"}`}
+                  lang="ru"
+                >
+                  Подписка на рассылку скоро появится. А пока подписывайтесь на наш Instagram — или
+                  позвоните/напишите нам, и мы добавим вас в список.
+                </p>
+                <a
+                  href="https://www.instagram.com/lalalandkids_fostercity"
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex items-center justify-center gap-2.5 font-display font-bold px-6.5 py-3 rounded-full bg-sun text-sun-ink"
+                >
+                  <svg className="w-5.5 h-5.5 stroke-current fill-none stroke-2">
+                    <use href="#i-instagram" />
+                  </svg>
+                  {lang === "ru"
+                    ? "Подписаться на @lalalandkids_fostercity"
+                    : "Follow @lalalandkids_fostercity"}
+                </a>
+                <a
+                  href="tel:+14153505015"
+                  className="inline-flex items-center justify-center font-display font-bold px-6.5 py-3 rounded-full bg-transparent text-white border-2 border-white/65"
+                >
+                  {lang === "ru"
+                    ? "Позвонить или написать (415) 350-5015"
+                    : "Call or Text (415) 350-5015"}
+                </a>
+                <p
+                  className={`text-[0.8rem] text-white/75 text-center ${lang === "ru" ? "hidden" : "block"}`}
+                >
+                  We usually write once a month. Unsubscribe anytime.
+                </p>
+                <p
+                  className={`text-[0.8rem] text-white/75 text-center ${lang === "ru" ? "block" : "hidden"}`}
+                  lang="ru"
+                >
+                  Мы пишем обычно раз в месяц. Отписаться можно в любой момент.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Reveal>
 
       <section id="blog" className="py-19 bg-cloud">
         <div className="w-[min(860px,94.5%)] mx-auto">
-          <div className="text-center max-w-175 mx-auto mb-11.5">
-            <span
-              className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "hidden" : "inline-block"}`}
-            >
-              The Blog
-            </span>
-            <span
-              className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "inline-block" : "hidden"}`}
-              lang="ru"
-            >
-              Блог
-            </span>
-
-            <h2
-              className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3 ${lang === "ru" ? "hidden" : "block"}`}
-            >
-              Best practices for young moms
-            </h2>
-            <h2
-              className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3 ${lang === "ru" ? "block" : "hidden"}`}
-              lang="ru"
-            >
-              Полезные советы для молодых мам
-            </h2>
-
-            <p className={`text-ink-soft ${lang === "ru" ? "hidden" : "block"}`}>
-              Practical, judgment-free notes from a mother–daughter team that has rocked, fed, and
-              raised a few kids of its own.
-            </p>
-            <p className={`text-ink-soft ${lang === "ru" ? "block" : "hidden"}`} lang="ru">
-              Практичные и поддерживающие заметки от команды мамы и дочери, которые сами вырастили и
-              воспитали своих детей.
-            </p>
-          </div>
-
+          <Reveal>
+            <div className="text-center max-w-175 mx-auto mb-11.5">
+              <span
+                className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "hidden" : "inline-block"}`}
+              >
+                The Blog
+              </span>
+              <span
+                className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "inline-block" : "hidden"}`}
+                lang="ru"
+              >
+                Блог
+              </span>
+              <h2
+                className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3 ${lang === "ru" ? "hidden" : "block"}`}
+              >
+                Best practices for young moms
+              </h2>
+              <h2
+                className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3 ${lang === "ru" ? "block" : "hidden"}`}
+                lang="ru"
+              >
+                Полезные советы для молодых мам
+              </h2>
+              <p className={`text-ink-soft ${lang === "ru" ? "hidden" : "block"}`}>
+                Practical, judgment-free notes from a mother–daughter team that has rocked, fed, and
+                raised a few kids of its own.
+              </p>
+              <p className={`text-ink-soft ${lang === "ru" ? "block" : "hidden"}`} lang="ru">
+                Практичные и поддерживающие заметки от команды мамы и дочери, которые сами вырастили
+                и воспитали своих детей.
+              </p>
+            </div>
+          </Reveal>
           <nav className="flex flex-wrap gap-2.5 justify-center mb-11">
             {toc.map((t) => (
               <a
@@ -803,70 +798,71 @@ export default function Newsletter() {
               </a>
             ))}
           </nav>
-
           {posts.map((post) => (
-            <article
-              key={post.id}
-              id={post.id}
-              className="bg-white rounded-brand shadow-brand-soft p-11 mb-8.5 scroll-mt-27.5"
-            >
-              <div className="rounded-brand-sm px-6.5 py-5 mb-6.5 flex items-center gap-4.5 bg-[linear-gradient(150deg,#eaf7fd,#4abbff)]">
-                <span className="font-display text-[1.05rem] font-bold text-ink-soft">
-                  {lang === "ru" ? post.bannerLabelRu : post.bannerLabelEn}
-                </span>
-              </div>
-              <p className="text-[0.85rem] text-ink-soft mb-2">
-                {lang === "ru" ? post.metaRu : post.metaEn}
-              </p>
-              <h2 className="font-display font-extrabold text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-4">
-                {lang === "ru" ? post.titleRu : post.titleEn}
-              </h2>
-              <div className="[&>p]:mb-4">{lang === "ru" ? post.contentRu : post.contentEn}</div>
-              <ContactAside />
-              <AuthorLine />
-            </article>
+            <Reveal key={post.id}>
+              <article
+                key={post.id}
+                id={post.id}
+                className="bg-white rounded-brand shadow-brand-soft p-11 mb-8.5 scroll-mt-27.5"
+              >
+                <div className="rounded-brand-sm px-6.5 py-5 mb-6.5 flex items-center gap-4.5 bg-[linear-gradient(150deg,#eaf7fd,#4abbff)]">
+                  <span className="font-display text-[1.05rem] font-bold text-ink-soft">
+                    {lang === "ru" ? post.bannerLabelRu : post.bannerLabelEn}
+                  </span>
+                </div>
+                <p className="text-[0.85rem] text-ink-soft mb-2">
+                  {lang === "ru" ? post.metaRu : post.metaEn}
+                </p>
+                <h2 className="font-display font-extrabold text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-4">
+                  {lang === "ru" ? post.titleRu : post.titleEn}
+                </h2>
+                <div className="[&>p]:mb-4">{lang === "ru" ? post.contentRu : post.contentEn}</div>
+                <ContactAside />
+                <AuthorLine />
+              </article>
+            </Reveal>
           ))}
         </div>
       </section>
 
-      <section className="bg-sky-ocean text-center text-white py-16">
-        <div className="w-[min(1240px,94.5%)] mx-auto">
-          <h2
-            className={`text-white mb-2.5 font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)] ${lang === "ru" ? "hidden" : "block"}`}
-          >
-            Want these tips in your inbox?
-          </h2>
-          <h2
-            className={`text-white mb-2.5 font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)] ${lang === "ru" ? "block" : "hidden"}`}
-            lang="ru"
-          >
-            Хотите получать эти советы на почту?
-          </h2>
-
-          <p
-            className={`text-white max-w-140 mx-auto mb-6.5 ${lang === "ru" ? "hidden" : "block"}`}
-          >
-            Subscribe to The Lala Letter above — or better yet, come ask us in person.
-          </p>
-          <p
-            className={`text-white max-w-140 mx-auto mb-6.5 ${lang === "ru" ? "block" : "hidden"}`}
-            lang="ru"
-          >
-            Подпишитесь на рассылку The Lala Letter выше — или, что еще лучше, приходите и спросите
-            нас лично.
-          </p>
-
-          <AnchorLink
-            to="visit"
-            className="inline-block text-center font-display font-bold text-[1.15rem] px-8.5 py-3.75 rounded-full bg-sun text-sun-ink transition-all duration-150 hover:-translate-y-0.5 hover:bg-sun-deep hover:shadow-brand"
-          >
-            <span className={lang === "ru" ? "hidden" : "inline"}>Book a Free Tour</span>
-            <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
-              Записаться на бесплатный визит
-            </span>
-          </AnchorLink>
-        </div>
-      </section>
+      <Reveal>
+        <section className="bg-sky-ocean text-center text-white py-16">
+          <div className="w-[min(1240px,94.5%)] mx-auto">
+            <h2
+              className={`text-white mb-2.5 font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)] ${lang === "ru" ? "hidden" : "block"}`}
+            >
+              Want these tips in your inbox?
+            </h2>
+            <h2
+              className={`text-white mb-2.5 font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)] ${lang === "ru" ? "block" : "hidden"}`}
+              lang="ru"
+            >
+              Хотите получать эти советы на почту?
+            </h2>
+            <p
+              className={`text-white max-w-140 mx-auto mb-6.5 ${lang === "ru" ? "hidden" : "block"}`}
+            >
+              Subscribe to The Lala Letter above — or better yet, come ask us in person.
+            </p>
+            <p
+              className={`text-white max-w-140 mx-auto mb-6.5 ${lang === "ru" ? "block" : "hidden"}`}
+              lang="ru"
+            >
+              Подпишитесь на рассылку The Lala Letter выше — или, что еще лучше, приходите и
+              спросите нас лично.
+            </p>
+            <AnchorLink
+              to="visit"
+              className="inline-block text-center font-display font-bold text-[1.15rem] px-8.5 py-3.75 rounded-full bg-sun text-sun-ink transition-all duration-150 hover:-translate-y-0.5 hover:bg-sun-deep hover:shadow-brand"
+            >
+              <span className={lang === "ru" ? "hidden" : "inline"}>Book a Free Tour</span>
+              <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
+                Записаться на бесплатный визит
+              </span>
+            </AnchorLink>
+          </div>
+        </section>
+      </Reveal>
     </main>
   );
 }

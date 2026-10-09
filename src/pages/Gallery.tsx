@@ -1,4 +1,5 @@
 import AnchorLink from "../components/layout/AnchorLink";
+import Reveal from "../components/Reveal";
 import SEO from "../components/SEO";
 import ReelCard from "../components/ui/ReelCard";
 import { useLanguage } from "../context/languageContext";
@@ -160,229 +161,233 @@ export default function Gallery() {
         description="A look inside Lala Land - rooms, play areas, and everyday moments at our multilingual family daycare and preschool in Foster City, CA."
         path="/gallery"
       />
-      <section className="text-center pt-14 pb-16 bg-[radial-gradient(circle_at_85%_12%,rgba(69,190,234,0.14),transparent_38%),linear-gradient(180deg,#eaf7fd,#fffdf8)]">
-        <div className="w-[min(1240px,94.5%)] mx-auto">
-          <span
-            className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "hidden" : "inline-block"}`}
-          >
-            Gallery
-          </span>
-          <span
-            className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "inline-block" : "hidden"}`}
-            lang="ru"
-          >
-            Галерея
-          </span>
+      <Reveal>
+        <section className="text-center pt-14 pb-16 bg-[radial-gradient(circle_at_85%_12%,rgba(69,190,234,0.14),transparent_38%),linear-gradient(180deg,#eaf7fd,#fffdf8)]">
+          <div className="w-[min(1240px,94.5%)] mx-auto">
+            <span
+              className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "hidden" : "inline-block"}`}
+            >
+              Gallery
+            </span>
+            <span
+              className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "inline-block" : "hidden"}`}
+              lang="ru"
+            >
+              Галерея
+            </span>
 
-          <h1
-            className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(2.1rem,5vw,3.4rem)] mb-3.5 ${lang === "ru" ? "hidden" : "block"}`}
-          >
-            Step inside Lala Land
-          </h1>
-          <h1
-            className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(2.1rem,5vw,3.4rem)] mb-3.5 ${lang === "ru" ? "block" : "hidden"}`}
-            lang="ru"
-          >
-            Загляните в Lala Land
-          </h1>
+            <h1
+              className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(2.1rem,5vw,3.4rem)] mb-3.5 ${lang === "ru" ? "hidden" : "block"}`}
+            >
+              Step inside Lala Land
+            </h1>
+            <h1
+              className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(2.1rem,5vw,3.4rem)] mb-3.5 ${lang === "ru" ? "block" : "hidden"}`}
+              lang="ru"
+            >
+              Загляните в Lala Land
+            </h1>
 
-          <p
-            className={`text-[clamp(1.05rem,2.2vw,1.3rem)] text-ink-soft max-w-160 mx-auto mb-2.5 ${lang === "ru" ? "hidden" : "block"}`}
-          >
-            Bright rooms, busy little hands, and everyday moments. Photos are shared with parent
-            permission only — and the best tour is still the real one.
-          </p>
-          <p
-            className={`text-[clamp(1.05rem,2.2vw,1.3rem)] text-ink-soft max-w-160 mx-auto mb-2.5 ${lang === "ru" ? "block" : "hidden"}`}
-            lang="ru"
-          >
-            Светлые комнаты, маленькие занятые ручки и повседневные моменты. Фото публикуются только
-            с разрешения родителей — а лучший тур всё же настоящий, вживую.
-          </p>
+            <p
+              className={`text-[clamp(1.05rem,2.2vw,1.3rem)] text-ink-soft max-w-160 mx-auto mb-2.5 ${lang === "ru" ? "hidden" : "block"}`}
+            >
+              Bright rooms, busy little hands, and everyday moments. Photos are shared with parent
+              permission only — and the best tour is still the real one.
+            </p>
+            <p
+              className={`text-[clamp(1.05rem,2.2vw,1.3rem)] text-ink-soft max-w-160 mx-auto mb-2.5 ${lang === "ru" ? "block" : "hidden"}`}
+              lang="ru"
+            >
+              Светлые комнаты, маленькие занятые ручки и повседневные моменты. Фото публикуются
+              только с разрешения родителей — а лучший тур всё же настоящий, вживую.
+            </p>
 
-          <p
-            className={`text-[0.95rem] text-ink-soft ${lang === "ru" ? "block" : "hidden"}`}
-            lang="ru"
-          >
-            Говорим по-русски — звоните:{" "}
-            <a href="tel:+14153505015" className="text-sky-ocean">
-              (415) 350-5015
-            </a>
-            .
-          </p>
+            <p
+              className={`text-[0.95rem] text-ink-soft ${lang === "ru" ? "block" : "hidden"}`}
+              lang="ru"
+            >
+              Говорим по-русски — звоните:{" "}
+              <a href="tel:+14153505015" className="text-sky-ocean">
+                (415) 350-5015
+              </a>
+              .
+            </p>
 
-          <div className="flex justify-center mt-5.5">
+            <div className="flex justify-center mt-5.5">
+              <AnchorLink
+                to="visit"
+                className="inline-block text-center font-display font-bold text-[1.15rem] px-8.5 py-3.75 rounded-full bg-sun text-sun-ink shadow-brand-soft transition-all duration-150 hover:-translate-y-0.5 hover:bg-sun-deep hover:shadow-brand"
+              >
+                <span className={lang === "ru" ? "hidden" : "inline"}>See It in Person</span>
+                <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
+                  Увидеть лично
+                </span>
+              </AnchorLink>
+            </div>
+          </div>
+        </section>
+      </Reveal>
+
+      <Reveal>
+        <section id="space" className="py-19">
+          <div className="w-[min(1240px,94.5%)] mx-auto">
+            <div className="text-center max-w-175 mx-auto mb-11.5">
+              <span
+                className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "hidden" : "inline-block"}`}
+              >
+                Our Space
+              </span>
+              <span
+                className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "inline-block" : "hidden"}`}
+                lang="ru"
+              >
+                Наше пространство
+              </span>
+              <h2
+                className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3 ${lang === "ru" ? "hidden" : "block"}`}
+              >
+                Rooms designed for little explorers
+              </h2>
+              <h2
+                className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3 ${lang === "ru" ? "block" : "hidden"}`}
+                lang="ru"
+              >
+                Комнаты для маленьких исследователей
+              </h2>
+              <p className={`text-ink-soft ${lang === "ru" ? "hidden" : "block"}`}>
+                Child-proofed, sunlit, and organized by what kids love to do.
+              </p>
+              <p className={`text-ink-soft ${lang === "ru" ? "block" : "hidden"}`} lang="ru">
+                Безопасно для детей, светло и организовано вокруг любимых занятий малышей.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5.5">
+              {spaceTiles.map((t, i) => (
+                <Tile key={i} {...t} />
+              ))}
+            </div>
+          </div>
+        </section>
+      </Reveal>
+
+      <Reveal>
+        <section id="moments" className="py-19 bg-cloud">
+          <div className="w-[min(1240px,94.5%)] mx-auto">
+            <div className="text-center max-w-175 mx-auto mb-11.5">
+              <span
+                className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "hidden" : "inline-block"}`}
+              >
+                Everyday Moments
+              </span>
+              <span
+                className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "inline-block" : "hidden"}`}
+                lang="ru"
+              >
+                Повседневные моменты
+              </span>
+              <h2
+                className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] ${lang === "ru" ? "hidden" : "block"}`}
+              >
+                What a normal day looks like
+              </h2>
+              <h2
+                className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] ${lang === "ru" ? "block" : "hidden"}`}
+                lang="ru"
+              >
+                Как выглядит обычный день
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5.5">
+              {momentTiles.map((t, i) => (
+                <Tile key={i} {...t} descEn="Photo coming soon" descRu="Фото скоро появится" />
+              ))}
+            </div>
+          </div>
+        </section>
+      </Reveal>
+
+      <Reveal>
+        <section id="video-tours" className="py-19">
+          <div className="w-[min(1240px,94.5%)] mx-auto">
+            <div className="text-center max-w-175 mx-auto mb-11.5">
+              <span
+                className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "hidden" : "inline-block"}`}
+              >
+                Video Tours
+              </span>
+              <span
+                className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "inline-block" : "hidden"}`}
+                lang="ru"
+              >
+                Видео-туры
+              </span>
+              <h2
+                className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3 ${lang === "ru" ? "hidden" : "block"}`}
+              >
+                Can’t visit yet? Take the video tour
+              </h2>
+              <h2
+                className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3 ${lang === "ru" ? "block" : "hidden"}`}
+                lang="ru"
+              >
+                Пока не можете приехать? Посмотрите видео-тур
+              </h2>
+              <p className={`text-ink-soft ${lang === "ru" ? "hidden" : "block"}`}>
+                Short vertical walkthroughs of the space — the next best thing to being here.
+              </p>
+              <p className={`text-ink-soft ${lang === "ru" ? "block" : "hidden"}`} lang="ru">
+                Короткие вертикальные видео по нашему пространству — почти как быть здесь лично.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6.5 max-w-225 mx-auto">
+              {reels.map((reel, i) => (
+                <ReelCard key={i} reel={reel} />
+              ))}
+            </div>
+          </div>
+        </section>
+      </Reveal>
+
+      <Reveal>
+        <section className="bg-[linear-gradient(120deg,#1e9ed4,#156f96)] text-center text-white py-16">
+          <div className="w-[min(1240px,94.5%)] mx-auto">
+            <h2
+              className={`text-white mb-2.5 font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)] ${lang === "ru" ? "hidden" : "block"}`}
+            >
+              Pictures are nice. Visits are better.
+            </h2>
+            <h2
+              className={`text-white mb-2.5 font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)] ${lang === "ru" ? "block" : "hidden"}`}
+              lang="ru"
+            >
+              Фотографии — это хорошо. Визит — ещё лучше.
+            </h2>
+            <p
+              className={`text-white/90 max-w-140 mx-auto mb-6.5 ${lang === "ru" ? "hidden" : "block"}`}
+            >
+              Book a free tour, see every room in person, and ask us anything — your little one goes
+              home with a dragon. Openings and tuition are discussed at your tour.
+            </p>
+            <p
+              className={`text-white/90 max-w-140 mx-auto mb-6.5 ${lang === "ru" ? "block" : "hidden"}`}
+              lang="ru"
+            >
+              Запишитесь на бесплатный визит, посмотрите каждую комнату лично и задайте любые
+              вопросы — а ваш малыш уйдёт домой с драконом. Свободные места и стоимость обсуждаются
+              на визите.
+            </p>
             <AnchorLink
               to="visit"
-              className="inline-block text-center font-display font-bold text-[1.15rem] px-8.5 py-3.75 rounded-full bg-sun text-sun-ink shadow-brand-soft transition-all duration-150 hover:-translate-y-0.5 hover:bg-sun-deep hover:shadow-brand"
+              className="inline-block text-center font-display font-bold text-[1.15rem] px-8.5 py-3.75 rounded-full bg-sun text-sun-ink transition-all duration-150 hover:-translate-y-0.5 hover:bg-sun-deep hover:shadow-brand"
             >
-              <span className={lang === "ru" ? "hidden" : "inline"}>See It in Person</span>
+              <span className={lang === "ru" ? "hidden" : "inline"}>Book a Free Tour</span>
               <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
-                Увидеть лично
+                Записаться на бесплатный визит
               </span>
             </AnchorLink>
           </div>
-        </div>
-      </section>
-
-      <section id="space" className="py-19">
-        <div className="w-[min(1240px,94.5%)] mx-auto">
-          <div className="text-center max-w-175 mx-auto mb-11.5">
-            <span
-              className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "hidden" : "inline-block"}`}
-            >
-              Our Space
-            </span>
-            <span
-              className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "inline-block" : "hidden"}`}
-              lang="ru"
-            >
-              Наше пространство
-            </span>
-
-            <h2
-              className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3 ${lang === "ru" ? "hidden" : "block"}`}
-            >
-              Rooms designed for little explorers
-            </h2>
-            <h2
-              className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3 ${lang === "ru" ? "block" : "hidden"}`}
-              lang="ru"
-            >
-              Комнаты для маленьких исследователей
-            </h2>
-
-            <p className={`text-ink-soft ${lang === "ru" ? "hidden" : "block"}`}>
-              Child-proofed, sunlit, and organized by what kids love to do.
-            </p>
-            <p className={`text-ink-soft ${lang === "ru" ? "block" : "hidden"}`} lang="ru">
-              Безопасно для детей, светло и организовано вокруг любимых занятий малышей.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5.5">
-            {spaceTiles.map((t, i) => (
-              <Tile key={i} {...t} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="moments" className="py-19 bg-cloud">
-        <div className="w-[min(1240px,94.5%)] mx-auto">
-          <div className="text-center max-w-175 mx-auto mb-11.5">
-            <span
-              className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "hidden" : "inline-block"}`}
-            >
-              Everyday Moments
-            </span>
-            <span
-              className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "inline-block" : "hidden"}`}
-              lang="ru"
-            >
-              Повседневные моменты
-            </span>
-
-            <h2
-              className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] ${lang === "ru" ? "hidden" : "block"}`}
-            >
-              What a normal day looks like
-            </h2>
-            <h2
-              className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] ${lang === "ru" ? "block" : "hidden"}`}
-              lang="ru"
-            >
-              Как выглядит обычный день
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5.5">
-            {momentTiles.map((t, i) => (
-              <Tile key={i} {...t} descEn="Photo coming soon" descRu="Фото скоро появится" />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="video-tours" className="py-19">
-        <div className="w-[min(1240px,94.5%)] mx-auto">
-          <div className="text-center max-w-175 mx-auto mb-11.5">
-            <span
-              className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "hidden" : "inline-block"}`}
-            >
-              Video Tours
-            </span>
-            <span
-              className={`font-display font-bold text-[0.85rem] tracking-[0.16em] uppercase px-4 py-1.5 rounded-full mb-3.5 bg-sky-mist text-sky-ocean ${lang === "ru" ? "inline-block" : "hidden"}`}
-              lang="ru"
-            >
-              Видео-туры
-            </span>
-
-            <h2
-              className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3 ${lang === "ru" ? "hidden" : "block"}`}
-            >
-              Can’t visit yet? Take the video tour
-            </h2>
-            <h2
-              className={`font-display font-extrabold tracking-[-0.015em] leading-[1.15] text-ink text-[clamp(1.7rem,3.6vw,2.4rem)] mb-3 ${lang === "ru" ? "block" : "hidden"}`}
-              lang="ru"
-            >
-              Пока не можете приехать? Посмотрите видео-тур
-            </h2>
-
-            <p className={`text-ink-soft ${lang === "ru" ? "hidden" : "block"}`}>
-              Short vertical walkthroughs of the space — the next best thing to being here.
-            </p>
-            <p className={`text-ink-soft ${lang === "ru" ? "block" : "hidden"}`} lang="ru">
-              Короткие вертикальные видео по нашему пространству — почти как быть здесь лично.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6.5 max-w-225 mx-auto">
-            {reels.map((reel, i) => (
-              <ReelCard key={i} reel={reel} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[linear-gradient(120deg,#1e9ed4,#156f96)] text-center text-white py-16">
-        <div className="w-[min(1240px,94.5%)] mx-auto">
-          <h2
-            className={`text-white mb-2.5 font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)] ${lang === "ru" ? "hidden" : "block"}`}
-          >
-            Pictures are nice. Visits are better.
-          </h2>
-          <h2
-            className={`text-white mb-2.5 font-display font-extrabold text-[clamp(1.7rem,3.6vw,2.4rem)] ${lang === "ru" ? "block" : "hidden"}`}
-            lang="ru"
-          >
-            Фотографии — это хорошо. Визит — ещё лучше.
-          </h2>
-
-          <p
-            className={`text-white/90 max-w-140 mx-auto mb-6.5 ${lang === "ru" ? "hidden" : "block"}`}
-          >
-            Book a free tour, see every room in person, and ask us anything — your little one goes
-            home with a dragon. Openings and tuition are discussed at your tour.
-          </p>
-          <p
-            className={`text-white/90 max-w-140 mx-auto mb-6.5 ${lang === "ru" ? "block" : "hidden"}`}
-            lang="ru"
-          >
-            Запишитесь на бесплатный визит, посмотрите каждую комнату лично и задайте любые вопросы
-            — а ваш малыш уйдёт домой с драконом. Свободные места и стоимость обсуждаются на визите.
-          </p>
-
-          <AnchorLink
-            to="visit"
-            className="inline-block text-center font-display font-bold text-[1.15rem] px-8.5 py-3.75 rounded-full bg-sun text-sun-ink transition-all duration-150 hover:-translate-y-0.5 hover:bg-sun-deep hover:shadow-brand"
-          >
-            <span className={lang === "ru" ? "hidden" : "inline"}>Book a Free Tour</span>
-            <span className={lang === "ru" ? "inline" : "hidden"} lang="ru">
-              Записаться на бесплатный визит
-            </span>
-          </AnchorLink>
-        </div>
-      </section>
+        </section>
+      </Reveal>
     </main>
   );
 }

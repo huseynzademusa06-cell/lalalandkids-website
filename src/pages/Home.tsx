@@ -14,6 +14,7 @@ import FAQ from "../components/sections/FAQ";
 import Visit from "../components/sections/Visit";
 import CtaBand from "../components/sections/CtaBand";
 import SEO from "../components/SEO";
+import Reveal from "../components/Reveal";
 
 export default function Home() {
   const location = useLocation();
@@ -72,17 +73,39 @@ export default function Home() {
       </SEO>
       <Hero />
       <TrustBar />
-      <About />
-      <VideoReels />
-      <Activities />
-      <Skills />
-      <Schedule />
-      <Nutrition />
-      <ForParents />
-      <Programs />
-      <FAQ />
-      <Visit />
-      <CtaBand />
+      <Reveal>
+        <About />
+      </Reveal>
+      <Reveal>
+        <VideoReels />
+      </Reveal>
+      <Reveal>
+        <Activities />
+      </Reveal>
+      <Reveal>
+        <Skills />
+      </Reveal>
+      <Reveal>
+        <Schedule />
+      </Reveal>
+      <Reveal>
+        <Nutrition />
+      </Reveal>
+      <Reveal>
+        <ForParents />
+      </Reveal>
+      <Reveal>
+        <Programs />
+      </Reveal>
+      <Reveal>
+        <FAQ />
+      </Reveal>
+      <Reveal>
+        <Visit />
+      </Reveal>
+      <Reveal>
+        <CtaBand />
+      </Reveal>
     </main>
   );
 }
