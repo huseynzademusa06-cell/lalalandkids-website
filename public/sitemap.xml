@@ -10,7 +10,7 @@
 
   <!-- Key Social Proof & Trust Signals -->
   <url>
-    <loc>https://lalalandkids.care/testimonials.html</loc>
+    <loc>https://lalalandkids.care/testimonials</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -18,7 +18,7 @@
 
   <!-- Facility Photo Gallery -->
   <url>
-    <loc>https://lalalandkids.care/gallery.html</loc>
+    <loc>https://lalalandkids.care/gallery</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -26,7 +26,7 @@
 
   <!-- Parent Engagement & Updates -->
   <url>
-    <loc>https://lalalandkids.care/newsletter.html</loc>
+    <loc>https://lalalandkids.care/newsletter</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
