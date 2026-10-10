@@ -112,7 +112,7 @@ no separate component-level stylesheet. Some of it looks wrong and is not:
 
 | File / system | Why |
 |---|---|
-| `public/CNAME` | Binds the domain. Deleting or editing it takes the site off lalalandkids.care. |
+| Custom domain setting (repo **Settings → Pages → Custom domain**) | Binds the domain to the site. Changing or clearing it takes the site off lalalandkids.care. Owner-only. (The site deploys through GitHub Actions, where GitHub ignores a `CNAME` file, so don't rely on the one in `public/`.) |
 | `public/robots.txt`, `public/sitemap.xml` | Live SEO. Fine to update deliberately; not fine to drop. Note: these live in `public/`, not the project root — only `public/`'s contents get copied into the deployed build. |
 | **DNS / domain registrar** | Also carries the **MX, SPF, DKIM and DMARC records that run the business email**. A wrong edit silently kills mail. Owner-only, always. |
 | Google Workspace / business email | Owner-only. |
