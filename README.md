@@ -70,15 +70,36 @@ don't default to the original asset dimensions.
 
 ## Deployment
 
-Deployed via GitHub Pages to a custom domain.
+The site deploys automatically to GitHub Pages using GitHub Actions
+(`.github/workflows/deploy.yml`).
 
-- `public/CNAME` must be present for the custom domain to survive a
-  deploy - Vite only copies `public/`'s contents into `dist/`, so this
-  file cannot live at the project root.
-- `public/robots.txt`, `public/sitemap.xml`, `public/favicon.svg` are
-  static passthrough assets, copied into `dist/` unmodified.
+### When it deploys
 
-<!-- TODO: document the actual deploy command / GitHub Actions workflow -->
+- On every push to `main`
+- On demand: Actions tab → "Deploy to GitHub Pages" → Run workflow
+
+Other branches do not deploy.
+
+### What the workflow does
+
+1. **Build job**: checks out the code, sets up Node 20 (with npm caching),
+   runs `npm ci`, then `npm run build`, and uploads the `dist/` folder.
+2. **Deploy job**: publishes the uploaded `dist/` folder to GitHub Pages.
+
+### Scripts that run automatically
+
+- `npm ci` triggers `postinstall`, which runs `src/scripts/fix-peer-deps.mjs`
+  (widens the React peer range of `react-helmet-async` so it installs with React 19).
+- `npm run build` runs `vite-react-ssg build` and then
+  `src/scripts/fix-charset.mjs` (moves the charset meta tag to the top of `<head>`).
+
+You never need to run these by hand, locally or in CI.
+
+### Custom domain
+
+The domain (lalalandkids.care) is configured in the repository's
+**Settings → Pages**, not in a file. A `CNAME` file in `public/` is ignored
+when deploying with GitHub Actions.
 
 ## Known accepted risks
 
