@@ -85,6 +85,7 @@ export default function About() {
             width="300"
             height="267"
             className="rounded-[26px] shadow-brand"
+            loading="lazy"
           />
         </div>
       </div>
