@@ -76,7 +76,7 @@ export default function About() {
         </div>
 
         {/* PLACEHOLDER: replace with a real photo*/}
-        <div className="rounded-brand overflow-hidden shadow-brand aspect-4/5 flex items-center justify-center bg-[linear-gradient(160deg,#eaf7fd,#fbd9e9_55%,#fdf3dc)] text-center p-7.5 text-ink-soft font-bold">
+        <div className="rounded-brand overflow-hidden shadow-brand aspect-4/5 flex items-center justify-center bg-(image:--gradient-pastel-dream) text-center p-7.5 text-ink-soft font-bold">
           <img
             src={logoFallback}
             srcSet={logoSrcSet}

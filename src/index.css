@@ -22,6 +22,11 @@
   --gradient-pink: linear-gradient(160deg, #f472b6, #c2185b);
   --gradient-sky: linear-gradient(160deg, #2ba5db, #156f96);
   --gradient-mint: linear-gradient(160deg, #34d399, #0f9d78);
+  --gradient-blue-magenta: linear-gradient(160deg, #7dd3fc, #f0abfc);
+  --gradient-cotton-candy: linear-gradient(160deg, #bae6fd, #f9a8d4);
+  --gradient-orchid-sky: linear-gradient(160deg, #93c5fd, #e879f9);
+  --gradient-pastel-dream: linear-gradient(160deg, #a5d8ff, #fbcfe8, #e9a8f5);
+  --gradient-lilac-mist: linear-gradient(160deg, #e0f2fe, #f5d0fe);
 
   --radius-brand: 22px;
   --radius-brand-sm: 14px;
