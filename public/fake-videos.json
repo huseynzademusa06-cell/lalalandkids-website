@@ -1,5 +1,9 @@
 {
-  "reels": ["data:text/html,%3Ch1%3ETest%20video%201%3C%2Fh1%3E", null, null],
+  "reels": [
+    "data:text/html,%3Cbody%20style=%27background:white%27%3E%3Ch1%3ETest%20video%201%3C%2Fh1%3E",
+    null,
+    null
+  ],
   "testimonials": [null, null, null],
   "gallery": [null, null, null]
 }

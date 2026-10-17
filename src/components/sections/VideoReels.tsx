@@ -1,8 +1,10 @@
 import { useLanguage } from "../../context/languageContext";
 import ReelCard from "../ui/ReelCard";
+import { useVideos } from "../../hooks/useVideos";
 
 export default function VideoReels() {
   const { lang } = useLanguage();
+  const videos = useVideos("reels");
 
   const reels = [
     {
@@ -57,7 +59,7 @@ export default function VideoReels() {
         {/* PLACEHOLDER VIDEO SLOTS */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6.5 max-w-225 mx-auto">
           {reels.map((reel, i) => (
-            <ReelCard key={i} reel={reel} />
+            <ReelCard key={i} reel={reel} videoUrl={videos[i]} />
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { useLanguage } from "../../context/languageContext";
 
-export type Reel = {
+export type ReelProps = {
   color: string;
   titleEn: string;
   titleRu: string;
@@ -8,8 +8,30 @@ export type Reel = {
   descRu: string;
 };
 
-export default function ReelCard({ reel }: { reel: Reel }) {
+export default function ReelCard({
+  reel,
+  videoUrl,
+}: {
+  reel: ReelProps;
+  videoUrl?: string | null;
+}) {
   const { lang } = useLanguage();
+
+  if (videoUrl) {
+    const title = lang === "ru" ? reel.titleRu : reel.titleEn;
+    return (
+      <div className="relative aspect-9/16 rounded-brand overflow-hidden shadow-brand bg-black">
+        <iframe
+          src={videoUrl}
+          title={title}
+          loading="lazy"
+          allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+          allowFullScreen
+          className="absolute inset-0 h-full w-full border-0"
+        />
+      </div>
+    );
+  }
 
   return (
     <div

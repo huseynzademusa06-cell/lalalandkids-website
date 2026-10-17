@@ -3,6 +3,7 @@ import Reveal from "../components/Reveal";
 import SEO from "../components/SEO";
 import ReelCard from "../components/ui/ReelCard";
 import { useLanguage } from "../context/languageContext";
+import { useVideos } from "../hooks/useVideos";
 
 const spaceTiles = [
   {
@@ -153,6 +154,7 @@ function Tile({
 
 export default function Gallery() {
   const { lang } = useLanguage();
+  const videos = useVideos("reels");
 
   return (
     <main className="font-body">
@@ -341,7 +343,7 @@ export default function Gallery() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6.5 max-w-225 mx-auto">
               {reels.map((reel, i) => (
-                <ReelCard key={i} reel={reel} />
+                <ReelCard key={i} reel={reel} videoUrl={videos[i]} />
               ))}
             </div>
           </div>
