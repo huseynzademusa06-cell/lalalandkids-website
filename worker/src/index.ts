@@ -5,7 +5,11 @@ function isAllowedOrigin(origin: string): boolean {
 }
 
 const FAKE_VIDEOS = {
-	reels: ['data:text/html,%3Cbody%20style=%27background:white%27%3E%3Ch1%3ETest%20video%201%3C%2Fh1%3E', null, null],
+	reels: [
+		'data:text/html,%3Cbody%20style=%27background:white%27%3E%3Ch1%3ETest%20video%201%3C%2Fh1%3E',
+		'data:text/html,%3Cbody%20style=%27background:blue%27%3E%3Ch1%3ETest%20video%201%3C%2Fh1%3E',
+		'data:text/html,%3Cbody%20style=%27background:red%27%3E%3Ch1%3ETest%20video%201%3C%2Fh1%3E',
+	],
 	testimonials: [null, null, null],
 	gallery: [null, null, null],
 };
