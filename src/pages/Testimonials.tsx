@@ -31,7 +31,7 @@ const reels = [
 
 export default function Testimonials() {
   const { lang } = useLanguage();
-  const videos = useVideos("reels");
+  const videos = useVideos("testimonials");
 
   return (
     <main className="font-body">

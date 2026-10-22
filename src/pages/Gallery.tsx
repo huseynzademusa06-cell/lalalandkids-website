@@ -154,7 +154,7 @@ function Tile({
 
 export default function Gallery() {
   const { lang } = useLanguage();
-  const videos = useVideos("reels");
+  const videos = useVideos("gallery");
 
   return (
     <main className="font-body">

@@ -1,17 +1,11 @@
 {
-  "reels": [
-    "",
-    null,
-    "data:text/html,%3Cbody%20style=%27background:white%27%3E%3Ch1%3EReels%202%3C%2Fh1%3E"
-  ],
+  "reels": ["https://iframe.mediadelivery.net/embed/1/2", null, null],
   "testimonials": [
     "data:text/html,%3Cbody%20style=%27background:white%27%3E%3Ch1%3ETesti%201%3C%2Fh1%3E",
-    "data:text/html,%3Cbody%20style=%27background:white%27%3E%3Ch1%3ETesti%202%3C%2Fh1%3E",
-    "data:text/html,%3Cbody%20style=%27background:white%27%3E%3Ch1%3ETesti%203%3C%2Fh1%3E"
+    "data:text/html,%3Cbody%20style=%27background:red%27%3E%3Ch1%3ETesti%202%3C%2Fh1%3E",
+    "data:text/html,%3Cbody%20style=%27background:blue%27%3E%3Ch1%3ETesti%203%3C%2Fh1%3E",
+    "data:text/html,%3Cbody%20style=%27background:green%27%3E%3Ch1%3ETesti%203%3C%2Fh1%3E",
+    "data:text/html,%3Cbody%20style=%27background:yellow%27%3E%3Ch1%3ETesti%203%3C%2Fh1%3E"
   ],
-  "gallery": [
-    "data:text/html,%3Cbody%20style=%27background:white%27%3E%3Ch1%3EGallery%201%3C%2Fh1%3E",
-    "data:text/html,%3Cbody%20style=%27background:white%27%3E%3Ch1%3EGallery%202%3C%2Fh1%3E",
-    "data:text/html,%3Cbody%20style=%27background:white%27%3E%3Ch1%3EGallery%203%3C%2Fh1%3E"
-  ]
+  "gallery": "oops"
 }
