@@ -5,7 +5,7 @@ export type VideoPlace = "reels" | "testimonials" | "gallery";
 export type VideoSlots = Record<VideoPlace, (string | null)[]>;
 
 const SLOT_COUNT = 3;
-const EMBED_HOSTS = ["iframe.mediadelivery.net"];
+const EMBED_HOSTS = ["iframe.mediadelivery.net", "player.mediadelivery.net"];
 
 const emptyRow = (): (string | null)[] => Array.from({ length: SLOT_COUNT }, () => null);
 
@@ -33,8 +33,13 @@ function isEmbedUrl(value: unknown): value is string {
   return url.protocol === "https:" && EMBED_HOSTS.includes(url.hostname);
 }
 
-function cleanSlots(raw: unknown): (string | null)[] {
-  const list: unknown[] = Array.isArray(raw) ? raw : [];
+function getList(data: unknown, place: VideoPlace): unknown[] {
+  if (typeof data !== "object" || data === null) return [];
+  const value = (data as Record<string, unknown>)[place];
+  return Array.isArray(value) ? value : [];
+}
+
+function cleanSlots(list: unknown[]): (string | null)[] {
   return Array.from({ length: SLOT_COUNT }, (_, i) => {
     const item = list[i];
     return isEmbedUrl(item) ? item : null;
@@ -57,9 +62,7 @@ export function useVideos(place: VideoPlace): (string | null)[] {
     let cancelled = false;
     loadVideos().then((data) => {
       if (cancelled) return;
-      const raw =
-        data && typeof data === "object" ? (data as Record<string, unknown>)[place] : undefined;
-      setSlots(cleanSlots(raw));
+      setSlots(cleanSlots(getList(data, place)));
     });
     return () => {
       cancelled = true;
